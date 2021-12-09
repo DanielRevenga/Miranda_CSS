@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <!-- CSS STYLES -->
+   <link rel="stylesheet" href="../css/styles.css">
+   <!-- FONT AWESOME -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+   <!-- HEADER -->
+   <header>
+      <nav onclick="document.querySelectorAll('.animation').forEach((el) => el.classList.toggle('active'));">
+         <div class="bars"><i class="fas fa-bars"></i></div>
+         <div class="drop_down animation">
+            <ul class="animation">    
+               <li> <a class="button button_brown" href="">About Us</a></li>
+               <li> <a class="button button_brown" href="">Rooms</a></li>
+               <li> <a class="button button_brown" href="">Offers</a></li>
+               <li> <a class="button button_brown" href="">News</a></li>
+               <li> <a class="button button_brown" href="">Contact</a></li>
+            </ul> 
+
+            <div class="container_headerInfo">
+               <div class="info_ontainer container_headerInfo_phone">                 
+                  <div class="info">
+                     <div>+908 987 877 09</div>
+                  </div>
+                  <div class="fakeIcon">
+                     <div class="fakeIcon_top"><i class="fas fa-phone"></i></div>
+                  </div>
+               </div>
+         
+               <div class="info_ontainer container_headerInfo_email">                
+                  <div class="info">
+                     <div>info@webmail.com</div>
+                  </div>
+                  <div class="fakeIcon">
+                     <div class="fakeIcon_top"><i class="fas fa-envelope"></i></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         </nav>
+      </nav>
+
+      <div class="container_logoH">
+         <!-- <div class="logoH">H</div> -->
+         <div>
+            <span class="bold">HOTEL</span> <br>
+            MIRANDA
+         </div>
+      </div>
+
+      <!-- <div class="container_headerInfo">
+         <div class="container_headerInfo_phone">
+            <div class="fakeIcon">
+               <div class="fakeIcon_top">phone</div>
+            </div>
+            <div class="info">
+               <div>Phone Numbe</div>
+               <div>+908 987 877 09</div>
+            </div>
+         </div>
+   
+         <div class="container_headerInfo_email">
+            <div class="fakeIcon">
+               <div class="fakeIcon_top">envelope</div>
+            </div>
+            <div class="info">
+               <div>Email Address</div>
+               <div>info@webmail.com</div>
+            </div>
+         </div>
+      </div> -->
+   </header>
+
+   <!-- MAIN CONTENT -->   
+   <main id="home">
+      <!-- MAIN CONTENT - HEADER -->
+      <section class="mainContent_header">
+         <div class="subtitle">The ultimate luxury experience</div>
+         <div class="title">
+            The perfect <br> Base for you
+         </div>
+         <div class="buttons">
+            <button class="button button_brown">Take a tour</button>
+            <button class="button button_grey">Learn more</button>
+         </div>
+      </section>
+      <!-- MAIN CONTENT - BODY -->
+      <div class="mainContent_body">
+         <!-- FORM AVAILABILITY -->
+         <form class="form_availability">
+            <div class="form_control">
+               <div class="label"><label for="arrival_date">Check in</label></div>
+               <div class="date hide_mobile_off">24</div>
+               <input class="hide_mobile_on" type="date" name="arrival_date" id="arrival_date"
+               placeholder="Set Arrival Date">
+            </div>
+            <div class="form_control">
+               <div class="label"><label for="departure_date">Check out</label></div>
+               <div class="date hide_mobile_off">29</div>
+               <input class="hide_mobile_on" type="date" name="departure_date" id="departure_date" 
+                  placeholder="Set Departure Date">
+            </div>
+            <button class="button button_brown">Book now</button>
+         </form>
+            <!-- TOUR -->
+         <section class="tour">
+            <div class="info">
+               <div class="subtitle colorGreyDark">Take a tour</div>
+               <div class="title">Discover our underground.</div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Inventore quidem in quasi, obcaecati, illum soluta modi 
+                  veniam asperiores alias quos voluptas id fugit vitae 
+                  quisquam recusandae minima repudiandae unde error.</p>
+               <!-- <button class="button button_brown">Book now</button> -->
+            </div>
+
+            <div class="video">
+               <iframe 
+                  src="https://www.youtube.com/embed/Bu3Doe45lcU?start=25" 
+                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+         </section>
+            <!-- SERVICES -->
+         <section class="services">
+            <div class="subtitle"><span class="colorGreyDark">Since</span> <span class="colorBrown">1994</span> </div>
+            <div class="title">Situatedd in prime position at the foot of the slopes of couchevel moriond.</div>
+            
+            <div class="container_icons">
+               <div class="container_icon">
+                  <div class="icon">
+                     <img src="../img/icons/coffee-cup.png" alt="">
+                  </div>
+                  <div>Breakfast</div>
+               </div>
+               <div class="container_icon">
+                  <div class="icon">
+                     <img src="../img/icons/plane3.png" alt="">
+                  </div>
+                  <div>Airport pickup</div>
+               </div>
+               <div class="container_icon">
+                  <div class="icon">
+                     <img src="../img/icons/position.png" alt="">
+                  </div>
+                  <div>City guide</div>
+               </div>
+               <div class="container_icon">
+                  <div class="icon">
+                     <img src="../img/icons/bbq.png" alt="">
+                  </div>
+                  <div>BBQ party</div>
+               </div>
+               <div class="container_icon">
+                  <div class="icon">
+                     <img src="../img/icons/room.png" alt="">
+                  </div>
+                  <div>Luxury room</div>
+               </div>
+            </div>
+
+            <div class="container_offers">
+               <div class="item img img1">
+
+               </div>
+               <div class="item">
+                  <div class="icon">
+                     <img src="../img/icons/clock.png" alt="">
+                  </div>
+                  <div class="title">Quiet Hours</div>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, unde?</p>
+               </div>
+               <div class="item img img2">
+                  
+               </div>
+               <div class="item">
+                  <div class="icon">
+                     <img src="../img/icons/delete_clock.png" alt="">
+                  </div>
+                  <div class="title">Free Cancellation</div>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, unde?</p>
+               </div>
+               <div class="item img img3">
+                  
+               </div>
+               <div class="item">
+                  <div class="icon">
+                     <!-- <img src="../img/icons/percentage.png" alt=""> -->
+                     <img src="../img/icons/percentage.png" alt="">
+                  </div>
+                  <div class="title">Special Offers</div>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, unde?</p>
+               </div>
+            </div>
+         </section>
+            <!-- ROOM TYPE -->
+         <section class="room_type">
+            <div class="subtitle">Room type</div>
+            <div class="title">Inspired lodging</div>
+            <ul>
+               <li>Luxury</li>
+               <li>Family</li>
+               <li>Double Bed</li>
+               <li>Relax</li>
+            </ul>
+            <div class="room_grid">
+               <div class="room junior">
+                  <div class="subtitle"><i class="far fa-calendar-alt"></i> 12 ROOMS</div>
+                  <div class="title">Junior Suite</div>
+               </div>
+               <div class="room junior">
+                  <div class="subtitle"><i class="far fa-calendar-alt"></i> 12 ROOMS</div>
+                  <div class="title">Junior Suite</div>
+               </div>
+               <div class="room hallFame">
+                  <div class="subtitle"><i class="far fa-calendar-alt"></i>03 ROOMS</div>
+                  <div class="title">Luxury Hall Of Fame</div>
+               </div>
+            </div>
+         </section>
+            <!-- CALL TO ACTION -->
+         <section class="call_action">
+            <div class="subtitle">Call to action</div>
+            <div class="title">The thin Escape</div>
+            
+            <div>
+               <div class="header">
+                  <div class="desc">Miranda has everything for your trip & every single thing.</div>
+                  <div class="btn"><button class="button button_black">Take a tour</button></div>
+               </div>
+
+               <div class="actions_grid">
+                  <div class="container_icon">
+                     <div class="icon">
+                        <img src="../img/icons/plane3.png" alt="">
+                     </div>
+                  </div>
+                  <div>       
+                     <div class="title">Easy & Free Transport</div>             
+                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                        Ut fugit rem doloremque molestias quas ipsa modi, similique 
+                        consectetur consequatur ad.</p>
+                  </div>
+               
+                  <div class="container_icon">
+                     <div class="icon">
+                        <img src="../img/icons/burger_chips.png" alt="">
+                     </div>
+                  </div>
+                  <div>   
+                     <div class="title">Clean & Fresh Food</div>          
+                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                        Ut fugit rem doloremque molestias quas ipsa modi, similique 
+                        consectetur consequatur ad.</p>
+                  </div>
+               
+                  <div class="container_icon">
+                     <div class="icon">
+                        <img src="../img/icons/pool_stairs.png" alt="">
+                     </div>
+                  </div>
+                  <div>      
+                     <div class="title">Play ground & Swimming Pool</div>            
+                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                        Ut fugit rem doloremque molestias quas ipsa modi, similique 
+                        consectetur consequatur ad.</p>
+                  </div>
+               </div>
+
+               <div class="footer_bar"></div>
+            </div>
+         </section>           
+            <!-- TESTIMONIALS -->
+         <section class="testimonials">
+            <div class="head">
+               <div class="subtitle">Testimonials</div>
+               <div class="title">Client feedback</div>
+            </div>
+
+            <div class="client_cards">
+               <div class="client_card">
+                  <div class="img_container">
+                     <div class="check"><i class="fas fa-check"></i></div>
+                     <img src="../img/testimonials/portrait_1.jpg" alt="">
+                  </div>
+                  <div class="name">Rosalina D. William</div>
+                  <div class="role">Founder, QUX CO.</div>
+                  <p>Lorem ipsum dolor sit amet consectetur 
+                     adipisicing elit. Amet quaerat maxime unde 
+                     atque dolorem corrupti.</p>
+               </div>
+
+               <div class="client_card">
+                  <div class="img_container">
+                     <div class="check"><i class="fas fa-check"></i></div>
+                     <img src="../img/testimonials/portrait_2.jpg" alt="">
+                  </div>
+                  <div class="name">Donald H. Hilixer</div>
+                  <div class="role">Founder, QUX CO.</div>
+                  <p>Lorem ipsum dolor sit amet consectetur 
+                     adipisicing elit. Amet quaerat maxime unde 
+                     atque dolorem corrupti.</p>
+               </div>
+            </div>
+
+            <div class="info">
+               Each of our nine lovely double guest rooms feature a private
+               bath, wi-fi, cable televisiion and include full breakfast
+            </div>
+         </section>
+            <!-- NEWS FEEDS -->
+         <section class="new_feeds">
+            <div class="head">
+               <div class="titles">
+                  <div class="subtitle">Blog</div>
+                  <div class="title">News Feeds</div>
+               </div>
+
+               <div class="arrows">
+                  <div class="arrow arrow_left"><i class="fas fa-arrow-left"></i></div>
+                  <div class="arrow arrow_right"><i class="fas fa-arrow-right"></i></div>
+               </div>
+            </div>
+
+            <div class="body">
+               <div class="body_item item1">
+                  <div class="feed_img"></div>
+                  <div class="content">
+                     <div class="subtitle">
+                        <div><i class="far fa-calendar-alt"></i> 23rd March 2019 </div>
+                        <div><i class="far fa-user"></i> By Admin</div>
+                     </div>
+                     <div class="title">Each of our 8 double rooms has its own distinct.</div>
+                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio 
+                        sit pariatur, dolore nisi labore corporis.</p>
+                  </div>
+               </div>
+
+               <div class="body_item item2">
+                  <div class="feed_img"></div>
+                  <div class="content">
+                     <div class="subtitle">
+                        <div><i class="far fa-calendar-alt"></i> 23rd March 2019 </div>
+                        <div><i class="far fa-user"></i> By Admin</div>
+                     </div>
+                     <div class="title">Each of our 8 double rooms has its own distinct.</div>
+                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio 
+                        sit pariatur, dolore nisi labore corporis.</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+            <!-- CARROUSEL
+         <section class="carrousel">
+            <div class="back">
+               <div><img src="../img/yard.jpg" alt=""></div>
+               <div><img src="../img/yard.jpg" alt=""></div>
+               <div><img src="../img/yard.jpg" alt=""></div>
+               <div><img src="../img/yard.jpg" alt=""></div>
+               <div><img src="../img/yard.jpg" alt=""></div>
+               <div><img src="../img/yard.jpg" alt=""></div>
+            </div>
+            <div class="top"></div>
+         </section> -->
+      </div>
+
+      <!-- FOOTER -->
+      <footer>
+         <div class="copy">
+            copyright by@example
+         </div>
+
+         <div class="rrss">
+            <div>
+               <i class="fab fa-facebook-f"></i>
+            </div>
+            <div>
+               <i class="fab fa-twitter"></i>
+            </div>
+            <div>
+               <i class="fab fa-instagram-square"></i>
+            </div>
+            <div>
+               <i class="fab fa-linkedin"></i>
+            </div>
+            <div>
+               <i class="fab fa-youtube"></i>
+            </div>
+         </div>
+      </footer>
+   </main>
+</body>
+</html>

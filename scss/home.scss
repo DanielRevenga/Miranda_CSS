@@ -1,0 +1,703 @@
+
+@import "general_properties";
+
+$media_queries : (
+   'mobile'    : "only screen and (max-width: 667px)",
+   'tablet'    : "only screen and (min-width: 668px) and (max-width: $size__site_content_width)",
+   'desktop'   : "only screen and (min-width: 1024px)",
+);
+
+@mixin breakpoint($breakpoints) {
+   $conditions : ();
+   @each $breakpoint in $breakpoints {
+       // If the key exists in the map
+       $conditions: append(
+           $conditions,
+           #{inspect(map-get($media_queries, $breakpoint))},
+           comma
+       );
+   }
+
+   @media #{$conditions} {
+       @content;
+   }
+
+}
+
+// MAIN CONTENT
+#home{
+   
+   .mainContent_header{
+      display: flex;
+      // background-color: $grey_dark;
+      // background-image: url("../img/home2.jpg");
+      background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) , url("../img/home2.jpg");
+      background-size: cover;
+      flex-flow: column;
+      height: 400px;
+      justify-content: space-between;
+      color: #fff;
+      padding-top: 13%;
+      padding-bottom: 15%;
+      padding-left: 7%;
+      text-transform: capitalize;
+      @media only screen and (min-width: $desktop) {
+         justify-content: center;
+         align-items: center;
+         height: 65vh;
+      }
+
+      .title{
+         font-family: 'Old Standard TT', serif;
+         background-color: #fff;
+         color: $grey_dark;
+         font-size: 2.2em;
+         margin-bottom: 30px;
+         padding: 2px;
+         width: fit-content;
+         @media only screen and (min-width: $desktop) {
+            color: #fff;
+            background-color: transparent;
+            font-size: 8em;
+            margin-bottom: 30px;
+            text-align: center;
+         }
+      }
+
+      .subtitle{
+         letter-spacing: 2px;
+         margin-bottom: 10px;
+         display: none;
+         @media only screen and (min-width: $desktop) {
+            display: block;
+            font-size: 1.5em;
+         }
+      }
+
+      button:nth-of-type(1){
+
+         @media only screen and (min-width: $desktop) {
+            margin-right: 20px;
+         }       
+      }
+
+   }
+
+   .mainContent_body{
+      width: 60vw;
+      margin-left: auto;
+      margin-right: auto;
+
+      .form_availability{
+         display: flex;
+         position: relative;
+         flex-wrap: wrap;
+         justify-content: center;
+         width: 100%;      
+         padding: 25px;
+         margin-bottom: 30px;
+         @media only screen and (min-width: $desktop) {
+            padding: 10px 35px;
+            margin-top: -72.5px;
+            height: 145px;
+            background-color: #fff;
+            align-items: center;
+            justify-content: space-between;
+            width: 60vw;
+            margin-left: auto;
+            margin-right: auto;
+         }
+
+         .form_control{
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @media only screen and (min-width: $desktop) {
+               display: block;
+            }
+
+            .label{
+               font-weight: bold;
+               @media only screen and (min-width: $desktop) {
+                  font-size: 1.5em;
+                  margin-bottom: 20px;
+               }
+            }
+                     
+            .date{
+               text-align: center;
+               font-size: 4em;
+               width: 100%;            
+            }
+
+            input{
+               border: none;
+               border-bottom: 3px solid $brown;
+               padding: 0 0 8px 2px;
+
+               @media only screen and (min-width: $desktop) {
+                  font-size: 1.5em;
+               }
+
+               &:active{
+                  border: none;
+                  border-bottom: 3px solid $brown;
+               }
+               &:focus{
+                  outline: none;
+                  border: none;
+                  border-bottom: 3px solid $brown;
+               }
+            }        
+         }
+
+         button{
+            margin-top: 20px;
+         }
+      }
+
+      // TOUR
+      .tour{
+         display: flex;
+         flex-wrap: wrap;    
+   
+         .video{
+            width: 100%;
+            min-height: 300px;
+            iframe{
+               width: 100%;
+               height: 100%;
+            }       
+         }
+   
+         .info{
+            padding: 5px;
+            margin-top: 15px;
+            
+            .subtitle{
+               font-weight: bold;
+               font-size: 1em;
+               margin-bottom: 10px;
+               letter-spacing: 1px;
+               text-transform: uppercase;
+            }
+   
+            .title{
+               font-size: 1.75em;
+               text-transform: capitalize;
+               margin-bottom: 20px;
+               font-family: 'Old Standard TT', serif;
+            }
+   
+            p{
+               line-height: 1.4;
+               margin-bottom: 15px;
+            }
+         }
+      }
+
+      // SERVICES
+      .services{
+         margin-top: 30px;
+         margin-bottom: 30px;
+
+         .container_icons{
+            display: flex;
+            flex-wrap: wrap;
+
+            .container_icon{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex-direction: column;
+               width: 50%;
+               padding: 20px;
+               font-size: 1em;
+
+               .icon{
+                  width: 60px;
+                  height: 60px;
+                  margin-bottom: 7.5px;
+   
+                  img{
+                     width: 100%;
+                     height: 100%;
+                  }
+               }
+
+               &:hover{
+                  background-color: $brown;
+                  color: #fff;
+               }
+            }         
+         }// container_icons
+
+         .subtitle{
+            font-size: 1.2em;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+         }
+
+         .title{
+            font-size: 1.5em;
+            text-align: center;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+         }
+
+         .container_offers{
+            display: grid;
+            width: 100%;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2px;color: #fff;
+
+            .item{
+               background-color: #fbf5f5;
+               // background-color: $grey_dark;
+               
+               padding: 10px;             
+
+               .icon{
+                  width: 40%;
+                  margin-bottom: 10px;
+
+                  img{
+                     width: 100%;
+                     height: 100%;
+                  }
+               }
+
+               .title{
+                  text-align: left;
+                  font-size: .8em;
+                  font-weight: bold;
+                  color: $grey_dark;
+               }
+               
+               p{
+                  text-align: justify;
+                  font-size: 0.65em;
+                  color: #111;
+               }
+
+               &.img{
+                  &.img1{
+                     background-image: url("../img/stairs.jpg");
+                     background-size: cover;
+                  }
+                  &.img2{
+                     background-image: url("../img/pool.jpg");
+                     background-size: cover;
+                  }
+                  &.img3{
+                     background-image: url("../img/yard.jpg");
+                     background-size: cover;
+                  }
+               }
+            }
+         }// container_offers
+      }// services
+
+      // CARROUSEL
+      .carrousel{
+         display: grid;
+         grid-template: repeat(4, 20px) / 1fr;
+
+         .back{
+            border: 1px solid red;
+            
+            display: flex;
+
+            img{
+               width: 100%;
+               height: 100%;
+            }
+         }
+
+         .top{
+            border: 1px solid green;
+         }
+      }// carrousel
+
+      // ROOM TYPE
+      .room_type{
+         margin-bottom: 30px;
+
+         .subtitle{
+            font-size: 1em;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+            color: $grey;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+         }
+
+         .title{
+            font-size: 2em;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+            font-family: 'Old Standard TT', serif;
+         }
+
+         ul{
+            display: flex;
+            list-style-type: none;
+            margin-bottom: 10px;
+            
+            &>*{
+               flex-basis: 100%;
+            }
+
+            li{
+               font-size: 0.9em;
+               text-align: center;
+               padding: 8px 4px;
+               font-weight: bold;
+               color: $grey_light;
+               border: 2px solid transparent;
+
+               &:hover{
+                  border: 2px solid $grey_light;
+                  color: #111;
+               }
+            }
+         }
+
+         .room_grid{
+            display: grid;
+            width: 100%;
+            height: 500px;
+            grid-template: 2fr 1fr / 1fr 1fr;
+            
+
+            .room{
+               display: flex;
+               flex-direction: column;
+               align-items: flex-start;
+               justify-content: flex-end;
+               padding: 0 14px;          
+               color: #fff;    
+               text-shadow: 2px 2px rgb(122, 122, 122);
+
+               &.junior{
+                  background-image: url("../img/hotel_chair.jpg");
+                  background-size: cover;
+               }
+
+               &.hallFame{
+                  background-image: url("../img/hall_of_fame.jpg");
+                  background-size: cover;
+                  background-position: center;
+               }
+
+               &:last-child{
+                  grid-column: 1 / span 3;
+               }
+
+               .subtitle{
+                  margin-bottom: 6px;
+                  font-size: 0.6em;
+                  color: #fff;
+               }
+
+               .title{
+                  font-family: 'Old Standard TT', serif;
+                  font-size: 1.4em;
+               }
+
+            }
+         }
+      }// room_type
+
+      // CALL ACTION
+      .call_action{
+         margin-bottom: 30px;
+
+         .subtitle{
+            font-size: 0.9em;
+            letter-spacing: 2px;
+            color: $grey;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 5px;
+         }
+
+         .title{
+            font-size: 2em;
+            font-family: 'Old Standard TT', serif;
+            margin-bottom: 10px;
+         }
+
+         .header{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            .desc{
+               font-size: 0.9em;
+               color: $brown;
+               font-weight: bold;
+               flex-basis: 60%;
+            }
+
+            .btn{
+               font-size: 0.7em;
+               flex-basis: 37%;
+
+               button{
+                  width: 100%;
+               }
+            }
+         }
+
+         .actions_grid{
+            display: grid;
+            grid-template: repeat(3, 1fr) / 24% 74%;
+            gap: 2%;
+
+            .container_icon{
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               // border: 1px solid red;
+            
+               .icon{
+                  height: 70px;
+                  width: 70px;   
+                  padding: 15px;
+                  border: 1px solid rgb(228, 226, 226);  
+                  border-radius: 50%;       
+                  
+                  &:hover{
+                     background-color: $brown;
+                  }
+      
+                  img{
+                     width: 100%;
+                     height: 100%;
+                  }
+               }
+            }
+
+            p{
+               font-size: 0.8em;
+            }
+
+            .title{
+               font-size: 1.5em;
+               margin-bottom: 5px;
+            }
+         }
+         
+         .footer_bar{
+            width: 80%;
+            height: 10px;
+            background-color: $brown;
+            margin: 20px auto 0 auto;
+         }
+      }// call_action
+      
+      // TESTIMONIALS
+      .testimonials{
+         margin-bottom: 30px;
+
+         .head{
+            padding-left: 10px;
+
+            .subtitle{
+               color: $grey;
+               letter-spacing: 2px;
+               font-weight: bold;
+               text-transform: uppercase;
+               margin-bottom: 5px;
+               font-size: 1em;
+            }
+
+            .title{
+               font-size: 2em;
+               text-transform: capitalize;
+               margin-bottom: 15px;
+               font-family: 'Old Standard TT', serif;
+               font-size: 2.5em;
+            }        
+         }
+
+         .client_cards{        
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+
+            .client_card{
+               display: flex;
+               flex-direction: column;
+               align-items: center;  
+               justify-content: space-between;    
+               border: 1px solid $brown;
+               padding: 10px;
+               width: 49%;    
+
+               .img_container{
+                  border-radius: 50%;
+                  width: 50%;
+                  position: relative;
+                  margin-bottom: 20px;
+                  // height: 40px;
+
+                  img{
+                     border-radius: 50%;
+                     width: 100%;
+                     height: 100%;
+                  }
+
+                  .check{
+                     color: #fff;
+                     border-radius: 50%;
+                     font-size: .6em;
+                     border: 2px solid #fff;
+                     padding: 6px;
+                     background-color: $brown;
+                     position: absolute;
+                     top: 0;
+                     right: 2%;
+                  }
+                  
+               }
+
+               .name{
+                  font-size: 1.1em;
+                  font-family: 'Old Standard TT', serif;
+                  margin-bottom: 5px;
+               }
+
+               .role{
+                  color: $brown;
+                  letter-spacing: 2px;
+                  font-weight: bold;
+                  font-size: .8em;
+                  margin-bottom: 15px;
+               }
+
+               p{
+                  font-size: .7em;
+                  text-align: center;
+               }
+            }
+         }
+
+         .info{
+            background-image: url("../img/hotel_view.jpg");
+            background-size: cover;
+            color: #fff;
+            padding: 5px 15px;
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+            font-size: 1.3em;
+            text-shadow: 2px 2px #474545;
+            line-height: 1.4;
+            font-family: 'Old Standard TT', serif;
+         }
+      }// testimonials
+
+      // NEW FEEDS
+      .new_feeds{
+         margin-bottom: 30px;
+
+         .head{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 10px;
+            margin-bottom: 15px;
+
+            .arrows{
+               display: flex;
+
+               .arrow{
+                  padding: 20px;
+                  font-size: 1.3em;
+                  border: 1px solid $brown;
+
+                  &:first-child{
+                     margin-right: 5px;
+                     
+                  }
+
+                  &:hover{
+                     background-color: $brown;
+                     border: none;
+                     color: #fff;
+                  }
+               }
+            }
+
+            .subtitle{
+               color: $grey;
+               letter-spacing: 2px;
+               font-weight: bold;
+               text-transform: uppercase;
+               margin-bottom: 5px;
+               font-size: 1em;
+            }
+   
+            .title{
+               font-size: 2em;
+               text-transform: capitalize;
+               margin-bottom: 15px;
+               font-family: 'Old Standard TT', serif;
+               font-size: 2.5em;
+            }
+         }// head
+
+         .body{
+            display: flex;
+
+            .body_item{
+               
+               &.item1{
+                  .feed_img{
+                     background-image: url("../img/not_disturb.jpg");
+                     background-size: cover;
+                     height: 150px;
+                  }
+               }
+
+               &.item2{
+                  .feed_img{
+                     background-image: url("../img/random_room1.jpg");
+                     background-size: cover;
+                     height: 150px;
+                  }
+               }
+
+               .content{               
+                  padding: 30px 10px;
+
+                  .subtitle{
+                     display: flex;
+                     justify-content: space-between;
+                     font-size: .6em;
+                     margin-bottom: 15px;
+                  }
+
+                  .title{
+                     font-size: .85em;
+                     font-weight: bold;
+                     font-family: 'Old Standard TT', serif;
+                     margin-bottom: 15px;
+                  }
+
+                  p{
+                     font-size: .7em;
+                  }
+               }
+            }
+         }
+      }// new feeds
+   }// mainContent_body
+
+   
+}
+

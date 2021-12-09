@@ -1,0 +1,292 @@
+// GENERAL PROPERTIES
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Roboto:wght@300&display=swap');
+
+*{
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   font-size: 1em;
+   font-family: 'Roboto', sans-serif;
+//    font-family: 'Old Standard TT', serif;
+}
+
+$black_std: #222222;
+$grey_dark: #393939;
+$grey: #777777;
+$grey_light: #cacaca;
+$grey_light_2: #DBDBDB;
+$grey_light_3: #F8F8F8;
+$brown: #BEAD8E;
+$brown_light: #CCC2BE;
+$hm: #F7F7F7;
+
+$desktop: 1024px;
+
+.flex{
+    display: flex;
+}
+.bold{
+    font-weight: bold;
+}
+.mBottom15{
+    margin-bottom: 15px;
+}
+.colorBrown{
+    color: $brown;
+}
+.colorGreyDark{
+    color: $grey_dark;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.hide_mobile_on{
+    display: none;  
+
+    @media only screen and (min-width: $desktop) {
+       display: block;
+    }
+}
+
+.hide_mobile_off{
+    display: block;  
+
+    @media only screen and (min-width: $desktop) {
+        display: none;
+    }
+}
+
+.button{
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 0.95em;
+    border: 0px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    @media only screen and (min-width: $desktop) {
+        color: #fff;
+        background-color: transparent;
+        font-size: 1.7em;
+        padding: 20px 44px;
+        margin-bottom: 30px;
+    }
+
+    &.button_brown{
+        background-color: $brown;    
+    }
+   
+    &.button_grey{
+        background-color: $grey_dark;
+        border: 1px solid #ffffff6e;
+    }
+
+    &.button_black{
+        background-color: #111111;
+        border: 1px solid #ffffff6e;
+    }
+}
+
+body, html{
+   // position: relative;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+}
+
+// HEADER
+header{
+    background-color: $grey_dark;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+ 
+    nav{
+        position: relative;  
+
+        .bars{
+            i{
+                font-size: 2em;
+                display: block;
+            }
+        }
+
+        .drop_down{
+            visibility: hidden;
+            position: absolute;
+            top: 210%;
+            left: -70%;
+            background-color: $grey_light;
+            width: 95vw;
+            padding: 15% 20px;
+            overflow-x: hidden;
+            width: 0;
+
+            &.active{
+                visibility: visible;
+                display: flex;
+                flex-direction: column;   
+                align-items: center;  
+                transition: 0.4s;      
+                overflow-x: visible; 
+                width: 95vw;
+
+            }
+
+            ul{
+                display: flex;           
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                width: 0;     
+                overflow: hidden;
+                list-style-type: none; 
+    
+                &.active{
+                    overflow: auto;
+                    width: 100%;
+                    transition: 0.4s;
+                }
+
+                li{
+                    background-color: $brown;
+                    width: 100%;             
+                    margin-top: 10px;       
+                    
+                    a{
+                        width: 100%;
+                        padding: 12px 30px;
+                        display: block;
+                    }
+                }
+            }
+        }
+         
+        .container_headerInfo{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            color: $grey_dark;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 30px;
+            font-size: 1.5em;
+
+            .info_ontainer{
+                display: flex;
+                margin-bottom: 20px;
+
+                .info{
+                    margin-right: 20px;
+                }
+            }
+        }
+        
+        
+    }
+ 
+    .container_logoH{
+        letter-spacing: 2px;
+        font-size: 26px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        // margin-left: auto;
+        // margin-right: auto;
+ 
+        .logoH{
+            font-size: 40px;
+            font-weight: bold;
+            padding: 8px 12px;
+            background-color: #fff;
+            color: $grey_dark;
+            margin-right: 15px;
+        }
+    }
+ 
+    // .container_headerInfo{
+    //    display: flex;
+ 
+    //    .container_headerInfo_phone, .container_headerInfo_email{
+    //         display: flex;
+    //         &:first-child{
+    //             margin-right: 20px;
+    //         }
+    
+    //         .fakeIcon{
+    //             display: flex;
+    //             justify-content: center;
+    //             align-items: center;
+    //             position: relative;
+    //             border-radius: 6px;
+    //             width: 24px;
+    //             height: 24px;
+    //             // border: 1px solid red;
+    //             background-color: $brown;
+    //             margin-right: 12px;
+    
+    //             .fakeIcon_top{
+    //                 position: absolute;
+    //             }
+    //         }
+    
+    //         .info{
+    //             div:first-child{
+    //                 margin-bottom: 2.5px;
+    //             }
+    //         }
+    //     }
+    // }
+}
+
+// FOOTER
+footer{
+    display: flex;
+    position: static;
+    bottom: 0;
+    background-color: #101111;
+    color: #fff;
+    height: 130px;
+    width: 100%;
+    padding: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+
+    .copy{
+        font-size: 0.7em;
+        width: 40%;
+        padding-right: 20px;
+    }
+
+    .rrss{
+        display: flex;       
+        width: 56%;
+        font-size: 1.2em;
+
+        div{
+            display: flex;
+            background-color: #212222;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1%;
+            flex: 1;
+            width: 20%;
+            height: 40px;
+
+            &:hover{
+                background-color: $brown;
+            }            
+        }
+    }
+}
