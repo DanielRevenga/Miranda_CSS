@@ -1,31 +1,8 @@
-
 @import "general_properties";
-
-$media_queries : (
-   'mobile'    : "only screen and (max-width: 667px)",
-   'tablet'    : "only screen and (min-width: 668px) and (max-width: $size__site_content_width)",
-   'desktop'   : "only screen and (min-width: 1024px)",
-);
-
-@mixin breakpoint($breakpoints) {
-   $conditions : ();
-   @each $breakpoint in $breakpoints {
-       // If the key exists in the map
-       $conditions: append(
-           $conditions,
-           #{inspect(map-get($media_queries, $breakpoint))},
-           comma
-       );
-   }
-
-   @media #{$conditions} {
-       @content;
-   }
-
-}
 
 // MAIN CONTENT
 #home{
+   z-index: 1;
    
    .mainContent_header{
       display: flex;
@@ -37,14 +14,14 @@ $media_queries : (
       height: 400px;
       justify-content: space-between;
       color: #fff;
-      padding-top: 13%;
+      padding-top: 5%;
       padding-bottom: 15%;
       padding-left: 7%;
       text-transform: capitalize;
       @media only screen and (min-width: $desktop) {
          justify-content: center;
          align-items: center;
-         height: 65vh;
+         height: 80vh;
       }
 
       .title{
@@ -59,6 +36,7 @@ $media_queries : (
             color: #fff;
             background-color: transparent;
             font-size: 8em;
+            line-height: 1;
             margin-bottom: 30px;
             text-align: center;
          }
@@ -80,13 +58,15 @@ $media_queries : (
             margin-right: 20px;
          }       
       }
-
    }
 
    .mainContent_body{
-      width: 60vw;
+      width: 100vw;
       margin-left: auto;
       margin-right: auto;
+      @media only screen and (min-width: $desktop) {
+         width: 70vw;
+      }
 
       .form_availability{
          display: flex;
@@ -103,7 +83,7 @@ $media_queries : (
             background-color: #fff;
             align-items: center;
             justify-content: space-between;
-            width: 60vw;
+            width: 70vw;
             margin-left: auto;
             margin-right: auto;
          }
@@ -160,11 +140,20 @@ $media_queries : (
       // TOUR
       .tour{
          display: flex;
-         flex-wrap: wrap;    
+         flex-wrap: wrap;  
+         @media only screen and (min-width: $desktop) {
+            flex-direction: row-reverse;
+            margin-top: 120px;
+         }         
    
          .video{
             width: 100%;
             min-height: 300px;
+            @media only screen and (min-width: $desktop) {
+               width: 48%;
+               margin-right: 2%;
+            } 
+            
             iframe{
                width: 100%;
                height: 100%;
@@ -174,6 +163,10 @@ $media_queries : (
          .info{
             padding: 5px;
             margin-top: 15px;
+            @media only screen and (min-width: $desktop) {
+               width: 50%;
+               font-size: 1.5em;
+            } 
             
             .subtitle{
                font-weight: bold;
@@ -194,6 +187,15 @@ $media_queries : (
                line-height: 1.4;
                margin-bottom: 15px;
             }
+
+            button{
+               display: none;
+               @media only screen and (min-width: $desktop) {
+                  display: block;
+                  font-size: 1.2em;
+                  margin-top: 40px;
+               } 
+            }
          }
       }
 
@@ -201,10 +203,22 @@ $media_queries : (
       .services{
          margin-top: 30px;
          margin-bottom: 30px;
+         @media only screen and (min-width: $desktop) {
+            margin-top: 120px;
+         }
 
          .container_icons{
             display: flex;
             flex-wrap: wrap;
+            @media only screen and (min-width: $desktop) {
+               padding: 40px 12.5%;
+               margin-left: auto;
+               margin-right: auto;
+               flex-wrap: nowrap;
+               align-items: flex-start;
+               background-color: $grey;
+               font-size: .8em;
+            }
 
             .container_icon{
                display: flex;
@@ -214,11 +228,42 @@ $media_queries : (
                width: 50%;
                padding: 20px;
                font-size: 1em;
+               cursor: pointer;
+               font-size: 1.5em;
+               @media only screen and (min-width: $desktop) {
+                  margin-right: 4%;
+                  background-color: #fff;
+                  border-radius: 8px;
+                  
+                  &:hover{
+                     box-shadow: 14px 11px 50px -4px rgba(255,255,255,0.47);
+                  }
+                  &:hover{
+                     // box-shadow: none;
+                     border-radius: 8px;
+                  }
+
+                  &last-child{
+                     margin-right: 0;
+                  }
+
+                  &.middle{
+                     margin-top: 7.5%;
+                  }
+
+                  &.bottom{
+                     margin-top: 15%;
+                  }
+               }
 
                .icon{
                   width: 60px;
                   height: 60px;
                   margin-bottom: 7.5px;
+                  @media only screen and (min-width: $desktop) {
+                     width: 90px;
+                     height: 90px;
+                  }
    
                   img{
                      width: 100%;
@@ -230,6 +275,8 @@ $media_queries : (
                   background-color: $brown;
                   color: #fff;
                }
+
+               
             }         
          }// container_icons
 
@@ -244,24 +291,49 @@ $media_queries : (
             text-align: center;
             text-transform: capitalize;
             margin-bottom: 10px;
+            @media only screen and (min-width: $desktop) {
+               font-size: 2em;
+            }
+         }
+
+         .core_features_title{
+            text-align: center;
+            font-size: 3.5em;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            display: none;
+            @media only screen and (min-width: $desktop) {
+               display: block;
+            }
          }
 
          .container_offers{
             display: grid;
-            width: 100%;
+            width: 100%;    
             grid-template-rows: 1fr 1fr;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 2px;color: #fff;
+            @media only screen and (min-width: $desktop) {
+               height: 70vh;
+            }
 
             .item{
                background-color: #fbf5f5;
                // background-color: $grey_dark;
-               
-               padding: 10px;             
+               padding: 10px;      
+               @media only screen and (min-width: $desktop) {
+                  padding: 40px;
+                  background-color: $grey;             
+                  font-size: 1.5em;
+               }       
 
                .icon{
                   width: 40%;
-                  margin-bottom: 10px;
+                  margin-bottom: 10px; 
+                  @media only screen and (min-width: $desktop) {
+                     width: 30%;
+                     margin-bottom: 60px; 
+                  }   
 
                   img{
                      width: 100%;
@@ -274,12 +346,21 @@ $media_queries : (
                   font-size: .8em;
                   font-weight: bold;
                   color: $grey_dark;
+                  @media only screen and (min-width: $desktop) {
+                     font-size: 1.3em;
+                     color: #fff;
+                  }    
                }
                
                p{
                   text-align: justify;
                   font-size: 0.65em;
                   color: #111;
+                  @media only screen and (min-width: $desktop) {
+                     font-size: 0.8em;
+                     color: #fff;
+                  }   
+
                }
 
                &.img{
@@ -323,7 +404,10 @@ $media_queries : (
 
       // ROOM TYPE
       .room_type{
-         margin-bottom: 30px;
+         margin-bottom: 30px;       
+         @media only screen and (min-width: $desktop) {
+            margin-top: 150px;
+         }
 
          .subtitle{
             font-size: 1em;
@@ -339,12 +423,18 @@ $media_queries : (
             text-transform: capitalize;
             margin-bottom: 15px;
             font-family: 'Old Standard TT', serif;
+            @media only screen and (min-width: $desktop) {
+               font-size: 2.5em;
+            }
          }
 
          ul{
             display: flex;
             list-style-type: none;
             margin-bottom: 10px;
+            @media only screen and (min-width: $desktop) {
+               font-size: 1.8em;
+            }
             
             &>*{
                flex-basis: 100%;
@@ -357,6 +447,7 @@ $media_queries : (
                font-weight: bold;
                color: $grey_light;
                border: 2px solid transparent;
+               cursor: pointer;
 
                &:hover{
                   border: 2px solid $grey_light;
@@ -370,7 +461,10 @@ $media_queries : (
             width: 100%;
             height: 500px;
             grid-template: 2fr 1fr / 1fr 1fr;
-            
+            @media only screen and (min-width: $desktop) {
+               height: 70vh;
+               font-size: 1.7em;
+            }
 
             .room{
                display: flex;
@@ -414,6 +508,9 @@ $media_queries : (
       // CALL ACTION
       .call_action{
          margin-bottom: 30px;
+         @media only screen and (min-width: $desktop) {
+            margin-top: 120px;
+         }
 
          .subtitle{
             font-size: 0.9em;
@@ -428,6 +525,9 @@ $media_queries : (
             font-size: 2em;
             font-family: 'Old Standard TT', serif;
             margin-bottom: 10px;
+            @media only screen and (min-width: $desktop) {
+               font-size: 3em;
+            }
          }
 
          .header{
@@ -440,6 +540,9 @@ $media_queries : (
                color: $brown;
                font-weight: bold;
                flex-basis: 60%;
+               @media only screen and (min-width: $desktop) {
+                  font-size: 1.3em;
+               }
             }
 
             .btn{
@@ -448,6 +551,11 @@ $media_queries : (
 
                button{
                   width: 100%;
+                  @media only screen and (min-width: $desktop) {
+                     &:hover{
+                        background-color: $grey;
+                     }
+                  }
                }
             }
          }
@@ -456,19 +564,28 @@ $media_queries : (
             display: grid;
             grid-template: repeat(3, 1fr) / 24% 74%;
             gap: 2%;
+            @media only screen and (min-width: $desktop) {
+               grid-template: repeat(3, 1fr) / 24% 74%;
+            }
 
             .container_icon{
                display: flex;
                align-items: center;
                justify-content: center;
-               // border: 1px solid red;
             
                .icon{
                   height: 70px;
                   width: 70px;   
                   padding: 15px;
                   border: 1px solid rgb(228, 226, 226);  
-                  border-radius: 50%;       
+                  border-radius: 50%;
+                  cursor: pointer;
+                  @media only screen and (min-width: $desktop) {
+                     height: 180px;
+                     width: 180px;   
+                     padding: 30px;
+                     margin-bottom: 20px;
+                  }       
                   
                   &:hover{
                      background-color: $brown;
@@ -483,11 +600,17 @@ $media_queries : (
 
             p{
                font-size: 0.8em;
+               @media only screen and (min-width: $desktop) {
+                  font-size: 1.2em;
+               }  
             }
 
             .title{
                font-size: 1.5em;
                margin-bottom: 5px;
+               @media only screen and (min-width: $desktop) {
+                  font-size: 2em;
+               }  
             }
          }
          
@@ -499,130 +622,173 @@ $media_queries : (
          }
       }// call_action
       
-      // TESTIMONIALS
-      .testimonials{
-         margin-bottom: 30px;
+   // TESTIMONIALS
+   .testimonials{
+      margin-bottom: 30px;     
+      @media only screen and (min-width: $desktop) {
+         margin-top: 120px;
+      }  
 
-         .head{
-            padding-left: 10px;
+      .head{
+         padding-left: 10px;
 
-            .subtitle{
-               color: $grey;
-               letter-spacing: 2px;
-               font-weight: bold;
-               text-transform: uppercase;
-               margin-bottom: 5px;
-               font-size: 1em;
-            }
-
-            .title{
-               font-size: 2em;
-               text-transform: capitalize;
-               margin-bottom: 15px;
-               font-family: 'Old Standard TT', serif;
-               font-size: 2.5em;
-            }        
+         .subtitle{
+            color: $grey;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            font-size: 1em;
          }
 
-         .client_cards{        
+         .title{
+            font-size: 2em;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+            font-family: 'Old Standard TT', serif;
+            font-size: 2.5em;
+            @media only screen and (min-width: $desktop) {
+               font-size: 3em;
+            }  
+         }        
+      }
+
+      .client_cards{        
+         display: flex;
+         justify-content: space-around;
+         margin-bottom: 10px;
+         @media only screen and (min-width: $desktop) {
+            font-size: 1.8em;
+         }  
+
+         .client_card{
             display: flex;
-            justify-content: space-around;
-            margin-bottom: 10px;
+            flex-direction: column;
+            align-items: center;  
+            justify-content: space-between;    
+            border: 1px solid $brown;
+            padding: 10px;
+            width: 49%;  
+            @media only screen and (min-width: $desktop) {
+                  font-size: 1.2em;
+                  z-index: 2;
+            }    
 
-            .client_card{
-               display: flex;
-               flex-direction: column;
-               align-items: center;  
-               justify-content: space-between;    
-               border: 1px solid $brown;
-               padding: 10px;
-               width: 49%;    
+            .img_container{
+               border-radius: 50%;
+               width: 50%;
+               position: relative;
+               margin-bottom: 20px;
+               // height: 40px;
 
-               .img_container{
-                  border-radius: 50%;
-                  width: 50%;
-                  position: relative;
-                  margin-bottom: 20px;
-                  // height: 40px;
-
-                  img{
-                     border-radius: 50%;
-                     width: 100%;
-                     height: 100%;
-                  }
-
-                  .check{
-                     color: #fff;
-                     border-radius: 50%;
-                     font-size: .6em;
-                     border: 2px solid #fff;
-                     padding: 6px;
-                     background-color: $brown;
-                     position: absolute;
-                     top: 0;
-                     right: 2%;
-                  }
-                  
+               img{
+               border-radius: 50%;
+               width: 100%;
+               height: 100%;
                }
 
-               .name{
+               .check{
+                  color: #fff;
+                  border-radius: 50%;
+                  font-size: .6em;
+                  border: 2px solid #fff;
+                  padding: 8px;
+                  background-color: $brown;
+                  position: absolute;
+                  top: 0;
+                  right: 2%;
+                  z-index: 10;
+                  @media only screen and (min-width: $desktop) {
+                     font-size: .9em;
+                     top: 5%;
+                     right: 5%;
+                  }  
+               }        
+            }
+
+            .name{
                   font-size: 1.1em;
                   font-family: 'Old Standard TT', serif;
                   margin-bottom: 5px;
-               }
+            }
 
-               .role{
+            .role{
                   color: $brown;
                   letter-spacing: 2px;
                   font-weight: bold;
                   font-size: .8em;
                   margin-bottom: 15px;
-               }
+                  @media only screen and (min-width: $desktop) {
+                  font-size: .7em;
+                  } 
+            }
 
-               p{
+            p{
                   font-size: .7em;
                   text-align: center;
-               }
+                  @media only screen and (min-width: $desktop) {
+                     font-size: .6em;
+                  }   
             }
          }
+      }
 
-         .info{
-            background-image: url("../img/hotel_view.jpg");
-            background-size: cover;
-            color: #fff;
-            padding: 5px 15px;
-            text-align: center;
-            font-weight: bold;
-            padding: 10px;
-            font-size: 1.3em;
-            text-shadow: 2px 2px #474545;
-            line-height: 1.4;
-            font-family: 'Old Standard TT', serif;
-         }
-      }// testimonials
+      .info{
+         background-image: url("../img/hotel_view.jpg");
+         background-size: cover;
+         color: #fff;
+         padding: 5px 15px;
+         text-align: center;
+         font-weight: bold;
+         padding: 10px;
+         font-size: 1.3em;
+         text-shadow: 2px 2px #474545;
+         line-height: 1.4;
+         font-family: 'Old Standard TT', serif;
+         @media only screen and (min-width: $desktop) {
+            margin-top: 20px;
+            padding: 75px 20%;
+            letter-spacing: 2px;
+            font-size: 2.5em;
+         }  
+      }
+   }// testimonials
 
       // NEW FEEDS
       .new_feeds{
          margin-bottom: 30px;
+         @media only screen and (min-width: $desktop) {
+            margin-top: 120px;
+         }
 
          .head{
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding-left: 10px;
-            margin-bottom: 15px;
+            font-size: 1.5em;
+            @media only screen and (min-width: $desktop) {
+               font-size: 1.5em;
+            }
 
             .arrows{
                display: flex;
 
                .arrow{
-                  padding: 20px;
-                  font-size: 1.3em;
+                  padding: 15px 20px;
+                  font-size: 1em;
                   border: 1px solid $brown;
+                  cursor: pointer;
+                  @media only screen and (min-width: $desktop) {
+                     width: 100px;
+                     height: 80px;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                  }
 
                   &:first-child{
                      margin-right: 5px;
-                     
                   }
 
                   &:hover{
@@ -647,12 +813,19 @@ $media_queries : (
                text-transform: capitalize;
                margin-bottom: 15px;
                font-family: 'Old Standard TT', serif;
-               font-size: 2.5em;
+               font-size: 2em;     
+               @media only screen and (min-width: $desktop) {
+                  font-size: 2.5em;
+               }  
             }
          }// head
 
          .body{
             display: flex;
+            font-size: 1.4em;
+            @media only screen and (min-width: $desktop) {
+               font-size: 2.2em;
+            }
 
             .body_item{
                
@@ -661,6 +834,9 @@ $media_queries : (
                      background-image: url("../img/not_disturb.jpg");
                      background-size: cover;
                      height: 150px;
+                     @media only screen and (min-width: $desktop) {
+                        height: 30vh;
+                     }
                   }
                }
 
@@ -669,28 +845,42 @@ $media_queries : (
                      background-image: url("../img/random_room1.jpg");
                      background-size: cover;
                      height: 150px;
+                     @media only screen and (min-width: $desktop) {
+                        height: 30vh;
+                     }
                   }
                }
 
                .content{               
                   padding: 30px 10px;
+                  @media only screen and (min-width: $desktop) {
+                     margin-top: 10px;
+                     padding-right: 30px;
+                  }
 
                   .subtitle{
                      display: flex;
                      justify-content: space-between;
                      font-size: .6em;
                      margin-bottom: 15px;
+                     @media only screen and (min-width: $desktop) {
+                        margin-bottom: 25px;
+                     }
                   }
 
                   .title{
                      font-size: .85em;
                      font-weight: bold;
                      font-family: 'Old Standard TT', serif;
-                     margin-bottom: 15px;
+                     margin-bottom: 15px;    
+                     @media only screen and (min-width: $desktop) {
+                        margin-bottom: 15px;
+                        font-size: 0.9;
+                     }          
                   }
-
+ 
                   p{
-                     font-size: .7em;
+                     font-size: .5em;
                   }
                }
             }

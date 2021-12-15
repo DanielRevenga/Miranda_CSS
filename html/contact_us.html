@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <!-- CSS STYLES -->
+   <link rel="stylesheet" href="../css/styles.css">
+   <!-- FONT AWESOME -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body id="contact">
+
+    <!-- HEADER -->
+    <header>
+        <nav >
+            <div class="bars" onclick="document.querySelectorAll('.animation').forEach((el) => el.classList.toggle('active'));"><i class="fas fa-bars"></i></div>
+            <div class="drop_down animation">
+            <ul class="animation">    
+               <li> <a class="button button_brown" href="./about_us.html">About&nbsp;Us</a></li>
+               <li> <a class="button button_brown" href="./room_grid.html">Rooms</a></li>
+               <li> <a class="button button_brown" href="./reservation.html">Offers</a></li>
+               <li> <a class="button button_brown" href="">News</a></li>
+               <li> <a class="button button_brown" href="./contact_us.html">Contact</a></li>
+            </ul> 
+  
+               <div class="container_logoH_nav">
+                  <div class="logoH">H</div>
+                  <div>
+                     <span class="bold">HOTEL</span> <br>
+                     MIRANDA
+                  </div>
+               </div>
+
+               <div class="container_headerInfo">
+                  <div class="info_container container_headerInfo_phone">                 
+                     <div class="info">
+                        <div class="title">Phone Number</div>
+                        <div class="data">+908 987 877 09</div>
+                     </div>
+                     <div class="fakeIcon">
+                        <div class="fakeIcon_top"><i class="fas fa-phone"></i></div>
+                     </div>
+                  </div>
+            
+                  <div class="info_container container_headerInfo_email">                
+                     <div class="info">
+                        <div class="title">Email Address</div>
+                        <div class="data">info@webmail.com</div>
+                     </div>
+                     <div class="fakeIcon">
+                        <div class="fakeIcon_top"><i class="fas fa-envelope"></i></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+        </nav>
+  
+        <div class="container_logoH">
+           <!-- <div class="logoH">H</div> -->
+           <div>
+              <span class="bold">HOTEL</span> <br>
+              MIRANDA
+           </div>
+        </div>
+     </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="mainContent">
+        <!-- MAIN CONTENT - HEADER -->
+        <section class="mainContent_header">
+            <div class="overlap_main_header"></div>
+            <div class="banner">
+                <div class="titles">
+                    <div class="subtitle">
+                        THE ULTIMATE LUXURY
+                    </div>
+                    <div class="title">
+                        <h1>Ultimate Room</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- MAIN CONTENT - CONTACT DETAILS -->
+        <section class="contact_details desktop">
+            <div class="details address">
+               <div class="icon-grid">
+                  <i class="fas fa-home"></i>
+               </div>
+               <div class="text-grid">
+                  <div class="title">Office Address</div>
+                  <div class="info">
+                        <p>19/A Cirikon Citty hall Tower, New York, NYC</p>
+                  </div>
+               </div>
+            </div>
+            <div class="details phone">
+               <div class="icon-grid">
+                  <i class="fas fa-phone"></i>
+               </div>
+               <div class="text-grid">
+                  <div class="title">Phone Number</div>
+                  <div class="info">
+                        <p>+97656 8675 7864 7</p>
+                        <p>+876 766 8575 765 6</p>
+                  </div>
+               </div>
+            </div>
+            <div class="details email">
+               <div class="icon-grid">
+                  <i class="fas fa-mail-bulk"></i>
+               </div>
+               <div class="text-grid">
+                  <div class="title">Email Address</div>
+
+                  <div class="info">
+                        <p>info@webmail.com</p>
+                        <p>jobs.info@webmail.com</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- MAIN CONTENT - MAP -->
+         <div class="map desktop">
+            <iframe
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830929283!2d-74.11976365596463!3d40.697663748538346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNueva%20York%2C%20EE.%20UU.!5e0!3m2!1ses!2ses!4v1637499943335!5m2!1ses!2ses"
+               style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+         </div>
+
+        <!-- MAIN CONTENT - CONTACT FORM -->
+        <section id="contactForm">
+            <form action="" id="userContactForm">
+                <div class="input-container">
+                    <div class="input_icon"><i class="fas fa-user"></i></div>
+                    <input class="input-field" type="text" placeholder="Your full name" name="fullName">
+                </div>
+                <div class="input-container">
+                    <div class="input_icon"><i class="fas fa-envelope"></i></div>
+                    <input class="input-field" type="text" placeholder="Enter e-mail address" name="email">
+                </div>
+                <div class="input-container">
+                    <div class="input_icon"><i class="fas fa-phone"></i></div>
+                    <input class="input-field" type="text" placeholder="Add phone number" name="phone">
+                </div>
+                <div class="input-container">
+                    <div class="input_icon"><i class="fas fa-file"></i></div>
+                    <select class="select-field" form="userForm" name="selectSubject">
+                        <option disabled selected>Select Subject</option>
+                        <option value="Option One">Option One</option>
+                        <option value="Option Two">Option Two</option>
+                        <option value="Option Three">Option Three</option>
+                    </select>
+                </div>
+                <div class="textarea-container">
+                    <div class="textarea_icon"><i class="fas fa-pen"></i></div>
+                    <textarea class="textArea" name="comment" form="userForm" rows="8" placeholder="Enter messages"></textarea>
+                </div>
+
+                <button class="button button_brown" type="button">GET FREE QUOTE</button>
+            </form>
+        </section>
+
+        <!-- MAIN CONTENT - CONTACT DETAILS -->
+        <section class="contact_details noDesktop">
+            <div class="details address">
+                <div class="icon-grid">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="text-grid">
+                    <div class="title">Office Address</div>
+                    <div class="info">
+                        <p>19/A Cirikon Citty hall Tower, New York, NYC</p>
+                    </div>
+                </div>
+            </div>
+            <div class="details phone">
+                <div class="icon-grid">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="text-grid">
+                    <div class="title">Phone Number</div>
+                    <div class="info">
+                        <p>+97656 8675 7864 7</p>
+                        <p>+876 766 8575 765 6</p>
+                    </div>
+                </div>
+            </div>
+            <div class="details email">
+                <div class="icon-grid">
+                    <i class="fas fa-mail-bulk"></i>
+                </div>
+                <div class="text-grid">
+                    <div class="title">Email Address</div>
+
+                    <div class="info">
+                        <p>info@webmail.com</p>
+                        <p>jobs.info@webmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN CONTENT - MAP -->
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830929283!2d-74.11976365596463!3d40.697663748538346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNueva%20York%2C%20EE.%20UU.!5e0!3m2!1ses!2ses!4v1637499943335!5m2!1ses!2ses"
+                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        
+    </main>
+
+    <!-- FOOTER -->
+    <footer>     
+        <!-- BODY -->
+        <div class="body">
+           <div class="logo_section">
+              <div class="logo_title">
+                 <div class="logo">H</div>
+                 <div class="title"><span>Hotel</span> Miranda</div>
+              </div>
+           
+              <div>
+                 <p>
+                    Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Ducimus vel fuga perspiciatis
+                    excepturi nulla odio illo labore tenetur voluptates temporibus!
+                 </p>
+              </div>
+           </div>
+  
+           <div class="services_section">
+              <div class="title">Services.</div>
+              <ul>
+                 <li><span>+</span> Restaurant & Bar</li>
+                 <li><span>+</span> Swimming Pool</li>
+                 <li><span>+</span> Wellness & Spa</li>
+                 <li><span>+</span> Restaurant</li>
+                 <li><span>+</span> Conference Room</li>
+                 <li><span>+</span> Coctail Party House</li>
+                 <li><span>+</span> Gaming Zone</li>
+                 <li><span>+</span> Marrige Party</li>
+                 <li><span>+</span> Party Planning</li>
+                 <li><span>+</span> Tour Consultancy</li>
+              </ul>
+           </div>
+  
+           <div class="contactUs_section">
+              <div class="title">Contact Us.</div>
+              <div class="contacts">
+                 <div class="contact">
+                    <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="info_container">
+                       <div class="title">Phone Number</div>
+                       <div class="info">+987 876 765 76 577</div>
+                    </div>
+                 </div>
+                 <div class="contact">
+                    <div class="icon"><i class="fas fa-envelope-open-text"></i></div>
+                    <div class="info_container">
+                       <div class="title">Email Address</div>
+                       <div class="info">info@webmail.com</div>
+                    </div>
+                 </div>
+                 <div class="contact">
+                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="info_container">
+                       <div class="title">Office Address</div>
+                       <div class="info">14/A, Miranda City, NYC</div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <!-- COPYRIGHT -->
+        <div class="copy">
+           copyright by@example
+        </div>
+        <!-- RRSS -->
+        <div class="rrss">
+           <div>
+              <i class="fab fa-facebook-f"></i>
+           </div>
+           <div>
+              <i class="fab fa-twitter"></i>
+           </div>
+           <div>
+              <i class="fab fa-instagram-square"></i>
+           </div>
+           <div>
+              <i class="fab fa-linkedin"></i>
+           </div>
+           <div>
+              <i class="fab fa-youtube"></i>
+           </div>
+        </div>
+    </footer>
+</body>
+
+</html>

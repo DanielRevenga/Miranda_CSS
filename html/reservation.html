@@ -15,64 +15,140 @@
 <body id="reservation">
     <!-- HEADER -->
     <header>
-        <nav>
-            <ul>
-                <li class="bars"><i class="fas fa-bars"></i></li>
-            </ul> 
+        <nav >
+           <div class="bars" onclick="document.querySelectorAll('.animation').forEach((el) => el.classList.toggle('active'));"><i class="fas fa-bars"></i></div>
+           <div class="drop_down animation">
+              <ul class="animation">    
+                 <li> <a class="button button_brown" href="./about_us.html">About&nbsp;Us</a></li>
+                 <li> <a class="button button_brown" href="./room_grid.html">Rooms</a></li>
+                 <li> <a class="button button_brown" href="./reservation.html">Offers</a></li>
+                 <li> <a class="button button_brown" href="">News</a></li>
+                 <li> <a class="button button_brown" href="./contact_us.html">Contact</a></li>
+              </ul> 
+  
+              <div class="container_logoH_nav">
+                 <div class="logoH">H</div>
+                 <div>
+                    <span class="bold">HOTEL</span> <br>
+                    MIRANDA
+                 </div>
+              </div>
+  
+              <div class="container_headerInfo">
+                 <div class="info_container container_headerInfo_phone">                 
+                    <div class="info">
+                       <div class="title">Phone Number</div>
+                       <div class="data">+908 987 877 09</div>
+                    </div>
+                    <div class="fakeIcon">
+                       <div class="fakeIcon_top"><i class="fas fa-phone"></i></div>
+                    </div>
+                 </div>
+           
+                 <div class="info_container container_headerInfo_email">                
+                    <div class="info">
+                       <div class="title">Email Address</div>
+                       <div class="data">info@webmail.com</div>
+                    </div>
+                    <div class="fakeIcon">
+                       <div class="fakeIcon_top"><i class="fas fa-envelope"></i></div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           </nav>
         </nav>
-
+  
         <div class="container_logoH">
-            <div>
-                <span class="bold">HOTEL</span> <br>
-                MIRANDA
-            </div>
+           <!-- <div class="logoH">H</div> -->
+           <div>
+              <span class="bold">HOTEL</span> <br>
+              MIRANDA
+           </div>
         </div>
-    </header>
+     </header>
         
     <!-- MAIN CONTENT  -->
     <main class="mainContent">
         <!-- MAIN CONTENT - HEADER -->
         <section class="mainContent_header">
-            <div class="extra-banner">
-                <div class="title">
-                    <h1>Luxury Double Bed</h1>
-                </div>
-                <div class="price">
-                    <p>$345<span class="price-info">/Night</span></p>
-                </div>
+            <div class="subtitle">
+               The ultimate luxury
             </div>
-        </section>
+            <div class="title">
+               Ultimate Room
+            </div>
+            
+            <div class="secondary_nav">
+               <div><span><a href="">Home</a> |</span> <a href="">Room Details</a></div>
+            </div>
+         </section>
 
-        <!-- MAIN CONTENT - AVAILABILITY -->
-        <div class="availability">
-            <div class="check-subtitle">
-                <div class="line"></div>
-                <h5>Check Availability</h5>
-            </div>
-            <div class="dates-check">
-                <div class="check-in">
-                    <label for="checkIn">Check In</label>
-                    <input class="checkIn" name="checkIn" type="date">
+        <!-- HEADER 2 + AVAILABILITY -->
+        <section class="header2_availability">
+            <!-- MAIN CONTENT - HEADER 2 -->
+            <section class="mainContent_header2">
+                <div class="extra-banner">
+                    <div class="title">
+                        <h1>Luxury Double Bed</h1>
+                    </div>
+                    <div class="price">
+                        <p>$345<span class="price-info">/Night</span></p>
+                    </div>
                 </div>
-                <div class="check-out">
-                    <label for="checkOut">Check Out</label>
-                    <input class="checkOut" name="checkOut" type="date">
+            </section>
+
+            <!-- MAIN CONTENT - AVAILABILITY -->
+            <section class="availability">
+                <div class="check-subtitle">
+                    <div class="line"></div>
+                    <h5>Check Availability</h5>
                 </div>
-            </div>
-            <div class="check-button">
-                <button class="checkButton" type="button">CHECK AVAILABILITY</button>
-            </div>
-        </div>
+                <form action="">
+                    <div class="check-in form-control">
+                        <label for="checkIn">Check In</label>
+                        <input class="checkIn" name="checkIn" type="date" placeholder="Check in">
+                    </div>
+                    <div class="check-out form-control">
+                        <label for="checkOut">Check Out</label>
+                        <input class="checkOut" name="checkOut" type="date" placeholder="Check out">
+                    </div>
+                    <div class="first_name form-control">
+                        <label for="first_name">Fisrt Name</label>
+                        <input class="first_name" name="first_name" type="text" placeholder="First name">
+                    </div>
+                    <div class="last_name form-control">
+                        <label for="last_name">Last name</label>
+                        <input class="last_name" name="last_name" type="text" placeholder="Last name">
+                    </div>
+                    <div class="email form-control">
+                        <label for="email">Email</label>
+                        <input class="email" name="email" type="email" placeholder="Email">
+                    </div>
+                    <div class="tlf form-control">
+                        <label for="tlf">Tlf</label>
+                        <input class="tlf" name="tlf" type="number" placeholder="Tlf">
+                    </div>
+                    <div class="comment form-control textarea-control">
+                        <label for="comment">Comment</label>
+                        <textarea name="comment" id="comment" cols="30" rows="5" placeholder="Comment"></textarea>
+                    </div>
+                </form>
+                <div class="check-button">
+                    <button class="checkButton" type="button">CHECK AVAILABILITY</button>
+                </div>
+            </section>
+        </section>
         <!-- ARTICLE -->
-        <div class="article">
+        <section class="article">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis inventore rem quibusdam perspiciatis
                 facilis delectus eum veniam explicabo libero, magnam reprehenderit consectetur dicta sit ratione, optio
                 porro tempora rerum tempore, voluptate nemo? Doloribus soluta facilis ea animi voluptatem iusto eius
                 reiciendis ipsam dolor unde, ut, deserunt deleniti! Temporibus alias tenetur aperiam reprehenderit!
             </p>
-        </div>
+        </section>
         <!-- AMENITIES -->
-        <div class="amenities-section">
+        <section class="amenities-section">
             <h4>Amenities</h4>
             <hr>
             <div class="amenities">
@@ -167,7 +243,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- TESTIMONIALS -->
         <section class="testimonials">
             <div class="head">
@@ -207,22 +283,21 @@
             </div>
         </section>
         <!-- CANCELATION -->
-        <div class="cancelation">
+        <section class="cancelation">
             <h4>Cancellation</h4>
             <hr>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti laborum consequuntur earum? Tenetur,
                 ut. Iure nemo laboriosam facilis ratione at laudantium debitis
             </p>
-        </div>
+        </section>
         <!-- MAP -->
-        <div class="map">
+        <section class="map">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830929283!2d-74.11976365596463!3d40.697663748538346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNueva%20York%2C%20EE.%20UU.!5e0!3m2!1ses!2ses!4v1637499943335!5m2!1ses!2ses"
                 style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-
-        
-        <div class="related_rooms">
+        </section>
+        <!-- RELATED ROOMS -->
+        <section class="related_rooms">
             <h2>Related Rooms</h2>
             <div class="related_room">
                 <div class="room-image">
@@ -273,32 +348,93 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <!-- FOOTER -->
-    <footer>
-    <div class="copy">
-        copyright by@example
-    </div>
+   <footer>     
+      <!-- BODY -->
+      <div class="body">
+         <div class="logo_section">
+            <div class="logo_title">
+               <div class="logo">H</div>
+               <div class="title"><span>Hotel</span> Miranda</div>
+            </div>
+         
+            <div>
+               <p>
+                  Lorem ipsum dolor sit amet consectetur,
+                  adipisicing elit. Ducimus vel fuga perspiciatis
+                  excepturi nulla odio illo labore tenetur voluptates temporibus!
+               </p>
+            </div>
+         </div>
 
-    <div class="rrss">
-        <div>
+         <div class="services_section">
+            <div class="title">Services.</div>
+            <ul>
+               <li><span>+</span> Restaurant & Bar</li>
+               <li><span>+</span> Swimming Pool</li>
+               <li><span>+</span> Wellness & Spa</li>
+               <li><span>+</span> Restaurant</li>
+               <li><span>+</span> Conference Room</li>
+               <li><span>+</span> Coctail Party House</li>
+               <li><span>+</span> Gaming Zone</li>
+               <li><span>+</span> Marrige Party</li>
+               <li><span>+</span> Party Planning</li>
+               <li><span>+</span> Tour Consultancy</li>
+            </ul>
+         </div>
+
+         <div class="contactUs_section">
+            <div class="title">Contact Us.</div>
+            <div class="contacts">
+               <div class="contact">
+                  <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                  <div class="info_container">
+                     <div class="title">Phone Number</div>
+                     <div class="info">+987 876 765 76 577</div>
+                  </div>
+               </div>
+               <div class="contact">
+                  <div class="icon"><i class="fas fa-envelope-open-text"></i></div>
+                  <div class="info_container">
+                     <div class="title">Email Address</div>
+                     <div class="info">info@webmail.com</div>
+                  </div>
+               </div>
+               <div class="contact">
+                  <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                  <div class="info_container">
+                     <div class="title">Office Address</div>
+                     <div class="info">14/A, Miranda City, NYC</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- COPYRIGHT -->
+      <div class="copy">
+         copyright by@example
+      </div>
+      <!-- RRSS -->
+      <div class="rrss">
+         <div>
             <i class="fab fa-facebook-f"></i>
-        </div>
-        <div>
+         </div>
+         <div>
             <i class="fab fa-twitter"></i>
-        </div>
-        <div>
+         </div>
+         <div>
             <i class="fab fa-instagram-square"></i>
-        </div>
-        <div>
+         </div>
+         <div>
             <i class="fab fa-linkedin"></i>
-        </div>
-        <div>
+         </div>
+         <div>
             <i class="fab fa-youtube"></i>
-        </div>
-    </div>
-    </footer>
+         </div>
+      </div>
+   </footer>
 </body>
 </html>

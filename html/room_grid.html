@@ -14,18 +14,79 @@
 <body>
    <!-- HEADER -->
    <header>
-      <nav>
-         <ul>
-            <li class="bars"><i class="fas fa-bars"></i></li>
-         </ul> 
+      <nav >
+         <div class="bars" onclick="document.querySelectorAll('.animation').forEach((el) => el.classList.toggle('active'));"><i class="fas fa-bars"></i></div>
+         <div class="drop_down animation">
+            <ul class="animation">    
+               <li> <a class="button button_brown" href="./about_us.html">About&nbsp;Us</a></li>
+               <li> <a class="button button_brown" href="./room_grid.html">Rooms</a></li>
+               <li> <a class="button button_brown" href="./reservation.html">Offers</a></li>
+               <li> <a class="button button_brown" href="">News</a></li>
+               <li> <a class="button button_brown" href="./contact_us.html">Contact</a></li>
+            </ul> 
+
+            <div class="container_logoH_nav">
+               <div class="logoH">H</div>
+               <div>
+                  <span class="bold">HOTEL</span> <br>
+                  MIRANDA
+               </div>
+            </div>
+
+            <div class="container_headerInfo">
+               <div class="info_container container_headerInfo_phone">                 
+                  <div class="info">
+                     <div class="title">Phone Number</div>
+                     <div class="data">+908 987 877 09</div>
+                  </div>
+                  <div class="fakeIcon">
+                     <div class="fakeIcon_top"><i class="fas fa-phone"></i></div>
+                  </div>
+               </div>
+         
+               <div class="info_container container_headerInfo_email">                
+                  <div class="info">
+                     <div class="title">Email Address</div>
+                     <div class="data">info@webmail.com</div>
+                  </div>
+                  <div class="fakeIcon">
+                     <div class="fakeIcon_top"><i class="fas fa-envelope"></i></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         </nav>
       </nav>
 
       <div class="container_logoH">
+         <!-- <div class="logoH">H</div> -->
          <div>
             <span class="bold">HOTEL</span> <br>
             MIRANDA
          </div>
       </div>
+
+      <!-- <div class="container_headerInfo">
+         <div class="container_headerInfo_phone">
+            <div class="fakeIcon">
+               <div class="fakeIcon_top">phone</div>
+            </div>
+            <div class="info">
+               <div>Phone Numbe</div>
+               <div>+908 987 877 09</div>
+            </div>
+         </div>
+   
+         <div class="container_headerInfo_email">
+            <div class="fakeIcon">
+               <div class="fakeIcon_top">envelope</div>
+            </div>
+            <div class="info">
+               <div>Email Address</div>
+               <div>info@webmail.com</div>
+            </div>
+         </div>
+      </div> -->
    </header>
 
    <!-- MAIN CONTENT -->   
@@ -37,6 +98,10 @@
          </div>
          <div class="title">
             Ultimate Room
+         </div>
+         
+         <div class="secondary_nav">
+            <div><span><a href="">Home</a> |</span> <a href="">Rooms</a></div>
          </div>
       </section>
 
@@ -103,33 +168,304 @@
                   <div class="booking">Booking Now</div>
                </div>
             </div>
+
+            <!-- ROOM -->
+            <div class="room">
+               <div class="room_img"></div>
+               <div class="room_body">
+                  <div class="icon_list">
+                     <ul>
+                        <li><i class="fas fa-bed"></i></li>
+                        <li><i class="fas fa-wifi"></i></li>
+                        <li><i class="fas fa-car-side"></i></li>
+                        <li><i class="fas fa-coffee"></i></li>
+                        <li><i class="fas fa-utensils"></i></li>
+                        <li><i class="fas fa-shower"></i></li>
+                        <li><i class="fas fa-tv"></i></li>
+                     </ul>
+                  </div>
+                  <div class="body_info">
+                     <div class="title">Minimal Duplex Room</div>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                     Quis inventore voluptatem nesciunt accusamus provident 
+                     aspernatur velit assumenda porro iure unde.</p> 
+                  </div>
+                  
+               </div>
+               <div class="extra_info">
+                  <div class="price">$345<span>/Night</span></div>
+                  <div class="hl"></div>
+                  <div class="booking">Booking Now</div>
+               </div>
+            </div>
+
+            <!-- ROOM -->
+            <div class="room">
+               <div class="room_img"></div>
+               <div class="room_body">
+                  <div class="icon_list">
+                     <ul>
+                        <li><i class="fas fa-bed"></i></li>
+                        <li><i class="fas fa-wifi"></i></li>
+                        <li><i class="fas fa-car-side"></i></li>
+                        <li><i class="fas fa-coffee"></i></li>
+                        <li><i class="fas fa-utensils"></i></li>
+                        <li><i class="fas fa-shower"></i></li>
+                        <li><i class="fas fa-tv"></i></li>
+                     </ul>
+                  </div>
+                  <div class="body_info">
+                     <div class="title">Minimal Duplex Room</div>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                     Quis inventore voluptatem nesciunt accusamus provident 
+                     aspernatur velit assumenda porro iure unde.</p> 
+                  </div>
+                  
+               </div>
+               <div class="extra_info">
+                  <div class="price">$345<span>/Night</span></div>
+                  <div class="hl"></div>
+                  <div class="booking">Booking Now</div>
+               </div>
+            </div>
+
+            <!-- ROOM -->
+            <div class="room">
+               <div class="room_img"></div>
+               <div class="room_body">
+                  <div class="icon_list">
+                     <ul>
+                        <li><i class="fas fa-bed"></i></li>
+                        <li><i class="fas fa-wifi"></i></li>
+                        <li><i class="fas fa-car-side"></i></li>
+                        <li><i class="fas fa-coffee"></i></li>
+                        <li><i class="fas fa-utensils"></i></li>
+                        <li><i class="fas fa-shower"></i></li>
+                        <li><i class="fas fa-tv"></i></li>
+                     </ul>
+                  </div>
+                  <div class="body_info">
+                     <div class="title">Minimal Duplex Room</div>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                     Quis inventore voluptatem nesciunt accusamus provident 
+                     aspernatur velit assumenda porro iure unde.</p> 
+                  </div>
+                  
+               </div>
+               <div class="extra_info">
+                  <div class="price">$345<span>/Night</span></div>
+                  <div class="hl"></div>
+                  <div class="booking">Booking Now</div>
+               </div>
+            </div>
+
+            <!-- ROOM -->
+            <div class="room">
+               <div class="room_img"></div>
+               <div class="room_body">
+                  <div class="icon_list">
+                     <ul>
+                        <li><i class="fas fa-bed"></i></li>
+                        <li><i class="fas fa-wifi"></i></li>
+                        <li><i class="fas fa-car-side"></i></li>
+                        <li><i class="fas fa-coffee"></i></li>
+                        <li><i class="fas fa-utensils"></i></li>
+                        <li><i class="fas fa-shower"></i></li>
+                        <li><i class="fas fa-tv"></i></li>
+                     </ul>
+                  </div>
+                  <div class="body_info">
+                     <div class="title">Minimal Duplex Room</div>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                     Quis inventore voluptatem nesciunt accusamus provident 
+                     aspernatur velit assumenda porro iure unde.</p> 
+                  </div>
+                  
+               </div>
+               <div class="extra_info">
+                  <div class="price">$345<span>/Night</span></div>
+                  <div class="hl"></div>
+                  <div class="booking">Booking Now</div>
+               </div>
+            </div>
+
+            <!-- ROOM -->
+            <div class="room">
+               <div class="room_img"></div>
+               <div class="room_body">
+                  <div class="icon_list">
+                     <ul>
+                        <li><i class="fas fa-bed"></i></li>
+                        <li><i class="fas fa-wifi"></i></li>
+                        <li><i class="fas fa-car-side"></i></li>
+                        <li><i class="fas fa-coffee"></i></li>
+                        <li><i class="fas fa-utensils"></i></li>
+                        <li><i class="fas fa-shower"></i></li>
+                        <li><i class="fas fa-tv"></i></li>
+                     </ul>
+                  </div>
+                  <div class="body_info">
+                     <div class="title">Minimal Duplex Room</div>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                     Quis inventore voluptatem nesciunt accusamus provident 
+                     aspernatur velit assumenda porro iure unde.</p> 
+                  </div>
+                  
+               </div>
+               <div class="extra_info">
+                  <div class="price">$345<span>/Night</span></div>
+                  <div class="hl"></div>
+                  <div class="booking">Booking Now</div>
+               </div>
+            </div>
+
+            <!-- ROOM -->
+            <div class="room">
+               <div class="room_img"></div>
+               <div class="room_body">
+                  <div class="icon_list">
+                     <ul>
+                        <li><i class="fas fa-bed"></i></li>
+                        <li><i class="fas fa-wifi"></i></li>
+                        <li><i class="fas fa-car-side"></i></li>
+                        <li><i class="fas fa-coffee"></i></li>
+                        <li><i class="fas fa-utensils"></i></li>
+                        <li><i class="fas fa-shower"></i></li>
+                        <li><i class="fas fa-tv"></i></li>
+                     </ul>
+                  </div>
+                  <div class="body_info">
+                     <div class="title">Minimal Duplex Room</div>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                     Quis inventore voluptatem nesciunt accusamus provident 
+                     aspernatur velit assumenda porro iure unde.</p> 
+                  </div>
+                  
+               </div>
+               <div class="extra_info">
+                  <div class="price">$345<span>/Night</span></div>
+                  <div class="hl"></div>
+                  <div class="booking">Booking Now</div>
+               </div>
+            </div>
+
+            <!-- ROOM -->
+            <div class="room">
+               <div class="room_img"></div>
+               <div class="room_body">
+                  <div class="icon_list">
+                     <ul>
+                        <li><i class="fas fa-bed"></i></li>
+                        <li><i class="fas fa-wifi"></i></li>
+                        <li><i class="fas fa-car-side"></i></li>
+                        <li><i class="fas fa-coffee"></i></li>
+                        <li><i class="fas fa-utensils"></i></li>
+                        <li><i class="fas fa-shower"></i></li>
+                        <li><i class="fas fa-tv"></i></li>
+                     </ul>
+                  </div>
+                  <div class="body_info">
+                     <div class="title">Minimal Duplex Room</div>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                     Quis inventore voluptatem nesciunt accusamus provident 
+                     aspernatur velit assumenda porro iure unde.</p> 
+                  </div>
+                  
+               </div>
+               <div class="extra_info">
+                  <div class="price">$345<span>/Night</span></div>
+                  <div class="hl"></div>
+                  <div class="booking">Booking Now</div>
+               </div>
+            </div>
          </section>
       </div>
-
-      <!-- FOOTER -->
-      <footer>
-         <div class="copy">
-            copyright by@example
-         </div>
-
-         <div class="rrss">
-            <div>
-               <i class="fab fa-facebook-f"></i>
-            </div>
-            <div>
-               <i class="fab fa-twitter"></i>
-            </div>
-            <div>
-               <i class="fab fa-instagram-square"></i>
-            </div>
-            <div>
-               <i class="fab fa-linkedin"></i>
-            </div>
-            <div>
-               <i class="fab fa-youtube"></i>
-            </div>
-         </div>
-      </footer>
    </main>
+
+   <!-- FOOTER -->
+   <footer>     
+      <!-- BODY -->
+      <div class="body">
+         <div class="logo_section">
+            <div class="logo_title">
+               <div class="logo">H</div>
+               <div class="title"><span>Hotel</span> Miranda</div>
+            </div>
+         
+            <div>
+               <p>
+                  Lorem ipsum dolor sit amet consectetur,
+                  adipisicing elit. Ducimus vel fuga perspiciatis
+                  excepturi nulla odio illo labore tenetur voluptates temporibus!
+               </p>
+            </div>
+         </div>
+
+         <div class="services_section">
+            <div class="title">Services.</div>
+            <ul>
+               <li><span>+</span> Restaurant & Bar</li>
+               <li><span>+</span> Swimming Pool</li>
+               <li><span>+</span> Wellness & Spa</li>
+               <li><span>+</span> Restaurant</li>
+               <li><span>+</span> Conference Room</li>
+               <li><span>+</span> Coctail Party House</li>
+               <li><span>+</span> Gaming Zone</li>
+               <li><span>+</span> Marrige Party</li>
+               <li><span>+</span> Party Planning</li>
+               <li><span>+</span> Tour Consultancy</li>
+            </ul>
+         </div>
+
+         <div class="contactUs_section">
+            <div class="title">Contact Us.</div>
+            <div class="contacts">
+               <div class="contact">
+                  <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                  <div class="info_container">
+                     <div class="title">Phone Number</div>
+                     <div class="info">+987 876 765 76 577</div>
+                  </div>
+               </div>
+               <div class="contact">
+                  <div class="icon"><i class="fas fa-envelope-open-text"></i></div>
+                  <div class="info_container">
+                     <div class="title">Email Address</div>
+                     <div class="info">info@webmail.com</div>
+                  </div>
+               </div>
+               <div class="contact">
+                  <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                  <div class="info_container">
+                     <div class="title">Office Address</div>
+                     <div class="info">14/A, Miranda City, NYC</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- COPYRIGHT -->
+      <div class="copy">
+         copyright by@example
+      </div>
+      <!-- RRSS -->
+      <div class="rrss">
+         <div>
+            <i class="fab fa-facebook-f"></i>
+         </div>
+         <div>
+            <i class="fab fa-twitter"></i>
+         </div>
+         <div>
+            <i class="fab fa-instagram-square"></i>
+         </div>
+         <div>
+            <i class="fab fa-linkedin"></i>
+         </div>
+         <div>
+            <i class="fab fa-youtube"></i>
+         </div>
+      </div>
+   </footer>
 </body>
 </html>

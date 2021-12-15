@@ -1,0 +1,447 @@
+@import "general_properties";
+
+#about_us{
+    .mainContent_header{
+        display: flex;   
+        // background-color: $grey_dark;
+        background-image: url("../img/home2.jpg");
+        background-size: cover;
+        flex-flow: column;
+        height: 400px;
+        justify-content: space-between;
+        color: #fff;
+        padding-top: 13%;
+        padding-bottom: 15%;
+        padding-left: 7%;
+        background-color: red;
+        text-transform: capitalize;
+        @media only screen and (min-width: $desktop) {
+            height: 35vh;
+            padding: 5% 10% 3% 10%;
+        }
+  
+        .title{
+           font-family: 'Old Standard TT', serif;
+           background-color: #fff;
+           color: $grey_dark;
+           font-size: 2.2em;
+           margin-bottom: 30px;
+           padding: 2px;
+           width: fit-content;
+        }
+  
+        .subtitle{
+           letter-spacing: 2px;
+           margin-bottom: 10px;
+        }
+    }
+
+    // MAIN CONTENT BODY 
+    .mainContent_body{
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+
+        // PRESENTATION
+        .presentation{
+            @media only screen and (min-width: $desktop) {
+                margin-top: 60px;
+             }   
+            
+            .desc{
+                text-align: center;
+                font-family: 'Old Standard TT', serif;
+                font-size: 1.3em;
+                width: 90%;
+                margin: 10px auto;
+                background-color: #F7F8F8;
+            }
+
+            .video{
+                width: 100%;
+                min-height: 300px;
+                @media only screen and (min-width: $desktop) {
+                    height: 40vh;
+                //    width: 48%;
+                //    margin-right: 2%;
+                } 
+                
+                iframe{
+                   width: 100%;
+                   height: 100%;
+                }       
+             }
+        }// presentation
+
+        // SERVICES
+        .services{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            @media only screen and (min-width: $desktop) {
+                margin-top: 120px;
+             }
+
+            .container_icons{
+                display: flex;
+                flex-wrap: wrap;
+                @media only screen and (min-width: $desktop) {
+                    padding: 40px 12.5%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    flex-wrap: nowrap;
+                    align-items: flex-start;
+                    background-color: $grey;
+                    font-size: .8em;
+                }
+
+                .container_icon{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 50%;
+                    padding: 20px;
+                    font-size: 1em;
+                    cursor: pointer;
+                    @media only screen and (min-width: $desktop) {
+                        margin-right: 4%;
+                        background-color: #fff;
+                        border-radius: 8px;
+                        
+                        &:hover{
+                           box-shadow: 14px 11px 50px -4px rgba(255,255,255,0.47);
+                        }
+                        &:hover{
+                           // box-shadow: none;
+                           border-radius: 8px;
+                        }
+      
+                        &last-child{
+                           margin-right: 0;
+                        }
+      
+                        &.middle{
+                           margin-top: 7.5%;
+                        }
+      
+                        &.bottom{
+                           margin-top: 15%;
+                        }
+                     }
+
+                    .icon{
+                        width: 60px;
+                        height: 60px;
+                        margin-bottom: 7.5px;
+                        @media only screen and (min-width: $desktop) {
+                            width: 90px;
+                            height: 90px;
+                         }
+        
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    &:hover{
+                        background-color: $brown;
+                        color: #fff;
+                    }
+                }         
+            }// container_icons
+
+            .subtitle{
+                font-size: 1.2em;
+                letter-spacing: 1.5px;
+                font-weight: bold;
+            }
+
+            .title{
+                font-size: 1.5em;
+                text-align: center;
+                text-transform: capitalize;
+                margin-bottom: 10px;
+                @media only screen and (min-width: $desktop) {
+                    font-size: 2em;
+                 }
+            }
+
+            .container_offers{
+                display: grid;
+                width: 100%;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 2px;
+                @media only screen and (min-width: $desktop) {
+                    height: 70vh;
+                    margin-top: 40px;
+                 }
+
+                .item{
+                    background-color: #fbf5f5;
+                    padding: 10px;
+                    @media only screen and (min-width: $desktop) {
+                        padding: 40px;
+                        background-color: $grey;             
+                        font-size: 1.5em;
+                     }   
+
+                    .icon{
+                        width: 40%;
+                        margin-bottom: 10px;
+                        @media only screen and (min-width: $desktop) {
+                            width: 30%;
+                            margin-bottom: 60px; 
+                         }  
+
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .title{
+                        text-align: left;
+                        font-size: 1em;
+                        font-weight: bold;
+                        color: $grey_dark;
+                        @media only screen and (min-width: $desktop) {
+                            font-size: 1.3em;
+                            color: #fff;
+                         }  
+                    }
+                    
+                    p{
+                        font-size: 0.65em;
+                        text-align: justify;
+                        color: #111;
+                        @media only screen and (min-width: $desktop) {
+                            font-size: 0.8em;
+                            color: #fff;
+                         }   
+                    }
+
+                    &.img{
+                        &.img1{
+                            background-image: url("../img/stairs.jpg");
+                            background-size: cover;
+                        }
+                        &.img2{
+                            background-image: url("../img/pool.jpg");
+                            background-size: cover;
+                        }
+                        &.img3{
+                            background-image: url("../img/yard.jpg");
+                            background-size: cover;
+                        }
+                    }
+                }
+            }// container_offers
+        }// services
+
+        // COUNTER
+        .counter{
+            margin-bottom: 20px;
+            @media only screen and (min-width: $desktop) {
+                margin-top: 200px;
+             }   
+
+            .head{
+                padding-left: 10px;           
+
+                .subtitle{
+                    color: $grey;
+                    letter-spacing: 2px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    margin-bottom: 5px;
+                    font-size: .8em;
+                }
+     
+                .title{
+                    font-size: 2em;
+                    text-transform: capitalize;
+                    margin-bottom: 15px;
+                    font-family: 'Old Standard TT', serif;
+                    font-size: 2em;
+                }
+            }  
+
+            .facts{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 1.2em;
+
+                .fact{
+                    display: flex;
+                    width: 70%;
+                    border: 1px solid $brown;
+                    justify-content: space-between;
+                    padding: 5px 20px;
+                    align-items: center;
+                    margin: 5px;
+                    background-color: #393939;
+                    color: #fff;
+
+                    .firstIcon{
+                        color: $brown;
+                        font-size: 1.3em;
+                        width: 20%;
+                    }
+
+                    .text{
+                        width: 60%;
+
+                        .secondarytext{
+                            font-size: 0.7em;
+                        }
+
+                        .mainText{
+                            font-size: 1.6em;
+                            font-weight: bold;
+                        }                
+                    }
+
+                    .lastIcon{
+                        color: $grey_light_2;
+                    }
+                }
+            }
+        }// counter
+
+      // NEW FEEDS
+      .new_feeds{
+        margin-bottom: 30px;
+        @media only screen and (min-width: $desktop) {
+           margin-top: 120px;
+        }
+
+        .head{
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           padding-left: 10px;
+           font-size: 1.5em;
+           @media only screen and (min-width: $desktop) {
+              font-size: 1.5em;
+           }
+
+           .arrows{
+              display: flex;
+
+              .arrow{
+                 padding: 15px 20px;
+                 font-size: 1em;
+                 border: 1px solid $brown;
+                 cursor: pointer;
+                 @media only screen and (min-width: $desktop) {
+                    width: 100px;
+                    height: 80px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                 }
+
+                 &:first-child{
+                    margin-right: 5px;
+                 }
+
+                 &:hover{
+                    background-color: $brown;
+                    border: none;
+                    color: #fff;
+                 }
+              }
+           }
+
+           .subtitle{
+              color: $grey;
+              letter-spacing: 2px;
+              font-weight: bold;
+              text-transform: uppercase;
+              margin-bottom: 5px;
+              font-size: 1em;
+           }
+  
+           .title{
+              font-size: 2em;
+              text-transform: capitalize;
+              margin-bottom: 15px;
+              font-family: 'Old Standard TT', serif;
+              font-size: 2em;     
+              @media only screen and (min-width: $desktop) {
+                 font-size: 2.5em;
+              }  
+           }
+        }// head
+
+        .body{
+           display: flex;
+           font-size: 1.4em;
+           @media only screen and (min-width: $desktop) {
+              font-size: 2.2em;
+           }
+
+           .body_item{
+              
+              &.item1{
+                 .feed_img{
+                    background-image: url("../img/not_disturb.jpg");
+                    background-size: cover;
+                    height: 150px;
+                    @media only screen and (min-width: $desktop) {
+                       height: 30vh;
+                    }
+                 }
+              }
+
+              &.item2{
+                 .feed_img{
+                    background-image: url("../img/random_room1.jpg");
+                    background-size: cover;
+                    height: 150px;
+                    @media only screen and (min-width: $desktop) {
+                       height: 30vh;
+                    }
+                 }
+              }
+
+              .content{               
+                 padding: 30px 10px;
+                 @media only screen and (min-width: $desktop) {
+                    margin-top: 10px;
+                    padding-right: 30px;
+                 }
+
+                 .subtitle{
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: .6em;
+                    margin-bottom: 15px;
+                    @media only screen and (min-width: $desktop) {
+                       margin-bottom: 25px;
+                    }
+                 }
+
+                .title{
+                    font-size: .85em;
+                    font-weight: bold;
+                    font-family: 'Old Standard TT', serif;
+                    margin-bottom: 15px;    
+                    @media only screen and (min-width: $desktop) {
+                       margin-bottom: 15px;
+                       font-size: 0.9;
+                    }          
+                }
+
+                p{
+                    font-size: .5em;
+                }
+              }
+           }
+        }
+     }// new feeds
+    }
+}
