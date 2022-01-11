@@ -22,6 +22,12 @@
          justify-content: center;
          align-items: center;
          height: 80vh;
+         width: 100vw;
+         padding-top: 100px;
+
+         .buttons{
+            margin-top: 40px;
+         }
       }
 
       .title{
@@ -65,7 +71,12 @@
       margin-left: auto;
       margin-right: auto;
       @media only screen and (min-width: $desktop) {
-         width: 70vw;
+         // width: 60vw;
+         & > div, & > section{
+            padding-left: 20vw;
+            padding-right: 20vw;
+            width: 100vw;
+         }
       }
 
       .form_availability{
@@ -74,16 +85,16 @@
          flex-wrap: wrap;
          justify-content: center;
          width: 100%;      
-         padding: 25px;
+         padding: 30px;
          margin-bottom: 30px;
          @media only screen and (min-width: $desktop) {
-            padding: 10px 35px;
+            padding: 10px 5%;
             margin-top: -72.5px;
             height: 145px;
             background-color: #fff;
             align-items: center;
             justify-content: space-between;
-            width: 70vw;
+            width: 60vw;
             margin-left: auto;
             margin-right: auto;
          }
@@ -140,7 +151,11 @@
       // TOUR
       .tour{
          display: flex;
+         justify-content: space-between;
          flex-wrap: wrap;  
+         background-image: linear-gradient(rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.9)) , url("../img/random_room3.jpg");
+         background-size: contain;
+
          @media only screen and (min-width: $desktop) {
             flex-direction: row-reverse;
             margin-top: 120px;
@@ -150,7 +165,7 @@
             width: 100%;
             min-height: 300px;
             @media only screen and (min-width: $desktop) {
-               width: 48%;
+               width: 57%;
                margin-right: 2%;
             } 
             
@@ -164,8 +179,7 @@
             padding: 5px;
             margin-top: 15px;
             @media only screen and (min-width: $desktop) {
-               width: 50%;
-               font-size: 1.5em;
+               width: 40%;
             } 
             
             .subtitle{
@@ -174,6 +188,9 @@
                margin-bottom: 10px;
                letter-spacing: 1px;
                text-transform: uppercase;
+               @media only screen and (min-width: $desktop) {
+                  font-size: $main_subtitles_d;
+               } 
             }
    
             .title{
@@ -181,11 +198,17 @@
                text-transform: capitalize;
                margin-bottom: 20px;
                font-family: 'Old Standard TT', serif;
+               @media only screen and (min-width: $desktop) {
+                  font-size: $main_titles_d;
+               } 
             }
    
             p{
-               line-height: 1.4;
+               line-height: 1.7;
                margin-bottom: 15px;
+               @media only screen and (min-width: $desktop) {
+                  font-size: 1.5em;
+               } 
             }
 
             button{
@@ -205,6 +228,10 @@
          margin-bottom: 30px;
          @media only screen and (min-width: $desktop) {
             margin-top: 120px;
+            background-color: $black_std;
+            padding-top: 30px;
+            padding-bottom: 100px;
+            width: 99.2vw;
          }
 
          .container_icons{
@@ -216,8 +243,9 @@
                margin-right: auto;
                flex-wrap: nowrap;
                align-items: flex-start;
-               background-color: $grey;
+               justify-content: center;            
                font-size: .8em;
+               padding: 90px 2%;
             }
 
             .container_icon{
@@ -231,9 +259,11 @@
                cursor: pointer;
                font-size: 1.5em;
                @media only screen and (min-width: $desktop) {
-                  margin-right: 4%;
+                  margin-right: 2%;
                   background-color: #fff;
+                  padding: 50px 0;
                   border-radius: 8px;
+                  font-size: 1.8em;
                   
                   &:hover{
                      box-shadow: 14px 11px 50px -4px rgba(255,255,255,0.47);
@@ -243,7 +273,7 @@
                      border-radius: 8px;
                   }
 
-                  &last-child{
+                  &:last-child{
                      margin-right: 0;
                   }
 
@@ -263,6 +293,7 @@
                   @media only screen and (min-width: $desktop) {
                      width: 90px;
                      height: 90px;
+                     margin-bottom: 10px;
                   }
    
                   img{
@@ -284,6 +315,12 @@
             font-size: 1.2em;
             letter-spacing: 1.5px;
             font-weight: bold;
+            @media only screen and (min-width: $desktop) {
+               font-size: 1.6em;
+               text-align: center;
+               margin-bottom: 10px;             
+               color: #fff;
+            } 
          }
 
          .title{
@@ -292,18 +329,33 @@
             text-transform: capitalize;
             margin-bottom: 10px;
             @media only screen and (min-width: $desktop) {
-               font-size: 2em;
+               font-size: $main_titles_d;
+               margin-bottom: 40px;
+               margin: 0 50px 40px 50px;
+               color: #fff;
             }
          }
 
          .core_features_title{
             text-align: center;
-            font-size: 3.5em;
-            margin-top: 60px;
+            font-size: 3.5em;         
             margin-bottom: 60px;
             display: none;
             @media only screen and (min-width: $desktop) {
                display: block;
+               font-size: $main_titles_d;
+               color: #fff;
+            }
+         }
+
+         .core_features_subtitle{
+            text-align: center;
+            margin-top: 60px;
+            @media only screen and (min-width: $desktop) {
+               display: block;
+               font-size: $main_subtitles_d;
+               color: #fff;
+               margin-bottom: 10px;
             }
          }
 
@@ -312,9 +364,9 @@
             width: 100%;    
             grid-template-rows: 1fr 1fr;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 2px;color: #fff;
+            gap: 20px;color: #fff;
             @media only screen and (min-width: $desktop) {
-               height: 70vh;
+               // height: 70vh;
             }
 
             .item{
@@ -323,7 +375,7 @@
                padding: 10px;      
                @media only screen and (min-width: $desktop) {
                   padding: 40px;
-                  background-color: $grey;             
+                  background-color: $grey_dark_2;             
                   font-size: 1.5em;
                }       
 
@@ -332,12 +384,16 @@
                   margin-bottom: 10px; 
                   @media only screen and (min-width: $desktop) {
                      width: 30%;
-                     margin-bottom: 60px; 
+                     margin-bottom: 30px; 
                   }   
 
                   img{
                      width: 100%;
                      height: 100%;
+                  }
+
+                  i{
+                     font-size: 4.3em;
                   }
                }
 
@@ -349,6 +405,7 @@
                   @media only screen and (min-width: $desktop) {
                      font-size: 1.3em;
                      color: #fff;
+                     margin: 10px 0;
                   }    
                }
                
@@ -381,32 +438,83 @@
          }// container_offers
       }// services
 
-      // CARROUSEL
-      .carrousel{
-         display: grid;
-         grid-template: repeat(4, 20px) / 1fr;
+      // CAROUSEL
+      .carousel{
+         @media only screen and (min-width: $desktop) {
+            height: 40vh;
+            margin-top: 60px;
+         }
+         
+         .glider_container{
+            height: 100%;
+            padding-top: 15px;
+            padding-bottom: 0;
+            background-color: $grey_light_2;
+            position: relative;
+            box-shadow: 20px 10px 28px 1px rgba(0,0,0,0.1);
 
-         .back{
-            border: 1px solid red;
-            
-            display: flex;
-
-            img{
+            .glider{
                width: 100%;
-               height: 100%;
+               overflow: hidden;
+   
+               @media only screen and (min-width: $desktop) {
+                  height: 80%;
+               }
+   
+               .glider-item{
+   
+                  @media only screen and (min-width: $desktop) {
+                     margin: 0 5px;
+                  }
+               }
+            }
+
+            .glider-prev,
+            .glider-next{
+               position: absolute;
+               display: block;
+               width: 30px;
+               height: 30px;
+               border: none;
+               top: calc(50% - 30px);
+               cursor: pointer;
+               line-height: 30px;
+               text-align: center;
+               color: $black_std;
+               background: none;
+               transition: none;
+               // opacity: 0.2;
+
+               &:hover{
+                  color: $grey;
+               }
+            }
+
+            .glider-prev{
+               left: -35px;
+            }
+            .glider-next{
+               right: -35px;
+            }
+
+            .glider-dot{
+               background-color: #fff;
+               &.active{
+                  background-color: $black_std;
+               }
+               &:hover{
+                  background-color: $grey;
+               }
             }
          }
-
-         .top{
-            border: 1px solid green;
-         }
-      }// carrousel
+         
+      }// carousel
 
       // ROOM TYPE
       .room_type{
          margin-bottom: 30px;       
          @media only screen and (min-width: $desktop) {
-            margin-top: 150px;
+            margin-top: 75px;
          }
 
          .subtitle{
@@ -416,6 +524,9 @@
             color: $grey;
             margin-bottom: 5px;
             text-transform: uppercase;
+            @media only screen and (min-width: $desktop) {
+               font-size: $main_subtitles_d;
+            }
          }
 
          .title{
@@ -424,7 +535,7 @@
             margin-bottom: 15px;
             font-family: 'Old Standard TT', serif;
             @media only screen and (min-width: $desktop) {
-               font-size: 2.5em;
+               font-size: $main_titles_d;
             }
          }
 
@@ -462,7 +573,7 @@
             height: 500px;
             grid-template: 2fr 1fr / 1fr 1fr;
             @media only screen and (min-width: $desktop) {
-               height: 70vh;
+               height: 75vh;
                font-size: 1.7em;
             }
 
@@ -474,6 +585,7 @@
                padding: 0 14px;          
                color: #fff;    
                text-shadow: 2px 2px rgb(122, 122, 122);
+               border: 1px solid #fff;
 
                &.junior{
                   background-image: url("../img/hotel_chair.jpg");
@@ -510,6 +622,10 @@
          margin-bottom: 30px;
          @media only screen and (min-width: $desktop) {
             margin-top: 120px;
+            width: 60vw;
+            margin-left: 20vw;
+            padding: 20px 40px;
+            box-shadow: 20px 10px 28px 1px rgba(0,0,0,0.07);
          }
 
          .subtitle{
@@ -519,6 +635,9 @@
             text-transform: uppercase;
             font-weight: bold;
             margin-bottom: 5px;
+            @media only screen and (min-width: $desktop) {
+               font-size: $main_subtitles_d;
+            }
          }
 
          .title{
@@ -526,7 +645,7 @@
             font-family: 'Old Standard TT', serif;
             margin-bottom: 10px;
             @media only screen and (min-width: $desktop) {
-               font-size: 3em;
+               font-size: $main_titles_d;
             }
          }
 
@@ -541,7 +660,7 @@
                font-weight: bold;
                flex-basis: 60%;
                @media only screen and (min-width: $desktop) {
-                  font-size: 1.3em;
+                  font-size: 1.7em;
                }
             }
 
@@ -581,8 +700,8 @@
                   border-radius: 50%;
                   cursor: pointer;
                   @media only screen and (min-width: $desktop) {
-                     height: 180px;
-                     width: 180px;   
+                     height: 150px;
+                     width: 150px;   
                      padding: 30px;
                      margin-bottom: 20px;
                   }       
@@ -601,7 +720,8 @@
             p{
                font-size: 0.8em;
                @media only screen and (min-width: $desktop) {
-                  font-size: 1.2em;
+                  font-size: 1.6em;
+                  line-height: 1.8;
                }  
             }
 
@@ -609,150 +729,157 @@
                font-size: 1.5em;
                margin-bottom: 5px;
                @media only screen and (min-width: $desktop) {
-                  font-size: 2em;
+                  font-size: 3em;
+                  margin-top: 10px;
                }  
             }
          }
          
          .footer_bar{
-            width: 80%;
+            width: 85%;
             height: 10px;
             background-color: $brown;
-            margin: 20px auto 0 auto;
+            margin: 25px auto 0 auto;
          }
       }// call_action
       
-   // TESTIMONIALS
-   .testimonials{
-      margin-bottom: 30px;     
-      @media only screen and (min-width: $desktop) {
-         margin-top: 120px;
-      }  
-
-      .head{
-         padding-left: 10px;
-
-         .subtitle{
-            color: $grey;
-            letter-spacing: 2px;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 5px;
-            font-size: 1em;
-         }
-
-         .title{
-            font-size: 2em;
-            text-transform: capitalize;
-            margin-bottom: 15px;
-            font-family: 'Old Standard TT', serif;
-            font-size: 2.5em;
-            @media only screen and (min-width: $desktop) {
-               font-size: 3em;
-            }  
-         }        
-      }
-
-      .client_cards{        
-         display: flex;
-         justify-content: space-around;
-         margin-bottom: 10px;
+      // TESTIMONIALS
+      .testimonials{
+         margin-bottom: 30px;     
          @media only screen and (min-width: $desktop) {
-            font-size: 1.8em;
+            margin-top: 120px;
          }  
 
-         .client_card{
+         .head{
+            // padding-left: 10px;
+
+            .subtitle{
+               color: $grey;
+               letter-spacing: 2px;
+               font-weight: bold;
+               text-transform: uppercase;
+               margin-bottom: 5px;
+               font-size: 1em;
+               @media only screen and (min-width: $desktop) {
+                  font-size: $main_subtitles_d;
+               }  
+            }
+
+            .title{
+               font-size: 2em;
+               text-transform: capitalize;
+               margin-bottom: 15px;
+               font-family: 'Old Standard TT', serif;
+               font-size: 2.5em;
+               @media only screen and (min-width: $desktop) {
+                  font-size: $main_titles_d;
+               }  
+            }        
+         }
+
+         .client_cards{        
             display: flex;
-            flex-direction: column;
-            align-items: center;  
-            justify-content: space-between;    
-            border: 1px solid $brown;
-            padding: 10px;
-            width: 49%;  
+            justify-content: space-around;
+            margin-bottom: 10px;
             @media only screen and (min-width: $desktop) {
-                  font-size: 1.2em;
-                  z-index: 2;
-            }    
+               font-size: 1.8em;
+            }  
 
-            .img_container{
-               border-radius: 50%;
-               width: 50%;
-               position: relative;
-               margin-bottom: 20px;
-               // height: 40px;
+            .client_card{
+               display: flex;
+               flex-direction: column;
+               align-items: center;  
+               justify-content: space-between;    
+               border: 1px solid $brown;
+               padding: 10px;
+               width: 49%;  
+               @media only screen and (min-width: $desktop) {
+                     font-size: 1.2em;
+                     z-index: 2;
+               }    
 
-               img{
-               border-radius: 50%;
-               width: 100%;
-               height: 100%;
+               .img_container{
+                  border-radius: 50%;
+                  width: 50%;
+                  position: relative;
+                  margin-bottom: 20px;
+                  // height: 40px;
+
+                  img{
+                  border-radius: 50%;
+                  width: 100%;
+                  height: 100%;
+                  }
+
+                  .check{
+                     color: #fff;
+                     border-radius: 50%;
+                     font-size: .6em;
+                     border: 2px solid #fff;
+                     padding: 8px;
+                     background-color: $brown;
+                     position: absolute;
+                     top: 0;
+                     right: 2%;
+                     z-index: 10;
+                     @media only screen and (min-width: $desktop) {
+                        font-size: .9em;
+                        top: 5%;
+                        right: 5%;
+                     }  
+                  }        
                }
 
-               .check{
-                  color: #fff;
-                  border-radius: 50%;
-                  font-size: .6em;
-                  border: 2px solid #fff;
-                  padding: 8px;
-                  background-color: $brown;
-                  position: absolute;
-                  top: 0;
-                  right: 2%;
-                  z-index: 10;
-                  @media only screen and (min-width: $desktop) {
-                     font-size: .9em;
-                     top: 5%;
-                     right: 5%;
-                  }  
-               }        
-            }
+               .name{
+                     font-size: 1.1em;
+                     font-family: 'Old Standard TT', serif;
+                     margin-bottom: 5px;
+               }
 
-            .name{
-                  font-size: 1.1em;
-                  font-family: 'Old Standard TT', serif;
-                  margin-bottom: 5px;
-            }
+               .role{
+                     color: $brown;
+                     letter-spacing: 2px;
+                     font-weight: bold;
+                     font-size: .8em;
+                     margin-bottom: 15px;
+                     @media only screen and (min-width: $desktop) {
+                     font-size: .7em;
+                     } 
+               }
 
-            .role{
-                  color: $brown;
-                  letter-spacing: 2px;
-                  font-weight: bold;
-                  font-size: .8em;
-                  margin-bottom: 15px;
-                  @media only screen and (min-width: $desktop) {
-                  font-size: .7em;
-                  } 
-            }
-
-            p{
-                  font-size: .7em;
-                  text-align: center;
-                  @media only screen and (min-width: $desktop) {
-                     font-size: .6em;
-                  }   
+               p{
+                     font-size: .7em;
+                     text-align: center;
+                     @media only screen and (min-width: $desktop) {
+                        font-size: .6em;
+                     }   
+               }
             }
          }
-      }
 
-      .info{
-         background-image: url("../img/hotel_view.jpg");
-         background-size: cover;
-         color: #fff;
-         padding: 5px 15px;
-         text-align: center;
-         font-weight: bold;
-         padding: 10px;
-         font-size: 1.3em;
-         text-shadow: 2px 2px #474545;
-         line-height: 1.4;
-         font-family: 'Old Standard TT', serif;
-         @media only screen and (min-width: $desktop) {
-            margin-top: 20px;
-            padding: 75px 20%;
-            letter-spacing: 2px;
-            font-size: 2.5em;
-         }  
-      }
-   }// testimonials
+         .info{
+            // background-image: url("../img/hotel_view.jpg");
+            background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) , url("../img/hotel_view.jpg");
+            background-size: cover;
+            color: #fff;
+            padding: 5px 15px;
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+            font-size: 1.3em;
+            text-shadow: 2px 2px #474545;
+            line-height: 1.4;
+            font-family: 'Old Standard TT', serif;
+            @media only screen and (min-width: $desktop) {
+               margin-top: 20px;
+               padding: 75px 20%;
+               letter-spacing: 2px;
+               font-size: 3.5em;
+               min-height: 40vh;
+               max-height: fit-content;
+            }  
+         }
+      }// testimonials
 
       // NEW FEEDS
       .new_feeds{
@@ -769,6 +896,7 @@
             font-size: 1.5em;
             @media only screen and (min-width: $desktop) {
                font-size: 1.5em;
+               padding: 0;
             }
 
             .arrows{
@@ -780,8 +908,8 @@
                   border: 1px solid $brown;
                   cursor: pointer;
                   @media only screen and (min-width: $desktop) {
-                     width: 100px;
-                     height: 80px;
+                     width: 70px;
+                     height: 60px;
                      display: flex;
                      justify-content: center;
                      align-items: center;
@@ -825,9 +953,11 @@
             font-size: 1.4em;
             @media only screen and (min-width: $desktop) {
                font-size: 2.2em;
+               justify-content: space-between;
             }
 
-            .body_item{
+            .body_item{             
+               margin-right: 1.5%;
                
                &.item1{
                   .feed_img{
@@ -851,11 +981,27 @@
                   }
                }
 
+               &.item3{
+                  .feed_img{
+                     background-image: url("../img/random_room3.jpg");
+                     background-size: cover;
+                     height: 150px;
+                     @media only screen and (min-width: $desktop) {
+                        height: 30vh;
+                     }
+                  }
+               }
+
+               &:nth-child(3n) {
+                  margin-right: 0;
+               }
+
                .content{               
                   padding: 30px 10px;
                   @media only screen and (min-width: $desktop) {
                      margin-top: 10px;
                      padding-right: 30px;
+                     font-size: 1.2em;
                   }
 
                   .subtitle{

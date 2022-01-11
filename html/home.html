@@ -5,40 +5,50 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
-   <!-- CSS STYLES -->
-   <link rel="stylesheet" href="../css/styles.css">
    <!-- FONT AWESOME -->
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+   <!-- Flatpickr -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+   <!-- Glider -->
+   <link rel="stylesheet" href="../css/glider.min.css">
+   <script src="../js/glider.min.js"></script>
+   <!-- MY CSS STYLES -->
+   <link rel="stylesheet" href="../css/styles.css">
+   <!-- MY JS -->
+   <script type="module" src="../js/main.js"></script>
 </head>
 
 <body>
    <!-- HEADER -->
    <header>
-      <nav >
+      <nav>
          <div class="bars" onclick="document.querySelectorAll('.animation').forEach((el) => el.classList.toggle('active'));"><i class="fas fa-bars"></i></div>
          <div class="drop_down animation">
             <ul class="animation">    
-               <li> <a class="button button_brown" href="./about_us.html">About&nbsp;Us</a></li>
-               <li> <a class="button button_brown" href="./room_grid.html">Rooms</a></li>
-               <li> <a class="button button_brown" href="./reservation.html">Offers</a></li>
-               <li> <a class="button button_brown" href="">News</a></li>
-               <li> <a class="button button_brown" href="./contact_us.html">Contact</a></li>
+               <li> <a class="button" href="./about_us.html">About&nbsp;Us</a></li>
+               <li> <a class="button" href="./room_grid.html">Rooms</a></li>
+               <li> <a class="button" href="./reservation.html">Offers</a></li>
+               <li> <a class="button" href="">Room Details</a></li>
+               <li> <a class="button" href="./contact_us.html">Contact</a></li>
             </ul> 
 
             <div class="container_logoH_nav">
-               <div class="logoH">H</div>
-               <div>
-                  <span class="bold">HOTEL</span> <br>
-                  MIRANDA
-               </div>
+               <a href="./home.html">
+                  <div class="logoH">H</div>
+                  <div>
+                     <span class="bold">HOTEL</span> <br>
+                     MIRANDA
+                  </div> 
+               </a> 
             </div>
 
             <div class="container_headerInfo">
                <div class="info_container container_headerInfo_phone">                 
                   <div class="info">
                      <div class="title">Phone Number</div>
-                     <div class="data">+908 987 877 09</div>
+                     <div class="data">648714734</div>
                   </div>
                   <div class="fakeIcon">
                      <div class="fakeIcon_top"><i class="fas fa-phone"></i></div>
@@ -48,7 +58,7 @@
                <div class="info_container container_headerInfo_email">                
                   <div class="info">
                      <div class="title">Email Address</div>
-                     <div class="data">info@webmail.com</div>
+                     <div class="data">daniel.revenga.garcia@gmail.com</div>
                   </div>
                   <div class="fakeIcon">
                      <div class="fakeIcon_top"><i class="fas fa-envelope"></i></div>
@@ -89,7 +99,7 @@
          </div>
       </div> -->
    </header>
-
+   
    <!-- MAIN CONTENT -->   
    <main id="home">
       <!-- MAIN CONTENT - HEADER -->
@@ -99,8 +109,8 @@
             The perfect <br> Base for you
          </div>
          <div class="buttons">
-            <button class="button button_brown">Take a tour</button>
-            <button class="button button_grey">Learn more</button>
+            <!-- <button class="button button_brown">Take a tour</button> -->
+            <button class="button button_grey"><a href="./about_us.html">About Us</a></button>
          </div>
       </section>
       <!-- MAIN CONTENT - BODY -->
@@ -110,18 +120,18 @@
             <div class="form_control">
                <div class="label"><label for="arrival_date">Check in</label></div>
                <div class="date hide_mobile_off">24</div>
-               <input class="hide_mobile_on" type="date" name="arrival_date" id="arrival_date"
+               <input class="hide_mobile_on flatpickr arrival" type="date" name="arrival_date" id="arrival_date"
                placeholder="Set Arrival Date">
             </div>
             <div class="form_control">
                <div class="label"><label for="departure_date">Check out</label></div>
                <div class="date hide_mobile_off">29</div>
-               <input class="hide_mobile_on" type="date" name="departure_date" id="departure_date" 
-                  placeholder="Set Departure Date">
+               <input class="hide_mobile_on flatpickr departure" type="date" name="departure_date" id="departure_date" 
+               placeholder="Set Departure Date">
             </div>
             <button class="button button_brown">Book now</button>
          </form>
-            <!-- TOUR -->
+         <!-- TOUR -->
          <section class="tour">
             <div class="info">
                <div class="subtitle colorGreyDark">Take a tour</div>
@@ -130,127 +140,145 @@
                   Inventore quidem in quasi, obcaecati, illum soluta modi 
                   veniam asperiores alias quos voluptas id fugit vitae 
                   quisquam recusandae minima repudiandae unde error.</p>
-               <button class="button button_brown">Book now</button>
-            </div>
-
-            <div class="video">
-               <iframe 
-                  src="https://www.youtube.com/embed/Bu3Doe45lcU?start=25" 
+                  <button class="button button_brown">Book now</button>
+               </div>
+               
+               <div class="video">
+                  <iframe 
+                  src="https://www.youtube.com/embed/Bu3Doe45lcU?start=25&end=75 " 
                   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-         </section>
+               </div>
+            </section>
             <!-- SERVICES -->
-         <section class="services">
-            <div class="subtitle"><span class="colorGreyDark">Since</span> <span class="colorBrown">1994</span> </div>
-            <div class="title">Situated in prime position at the foot of the slopes of couchevel moriond.</div>
-            
-            <div class="container_icons">
-               <div class="container_icon top">
-                  <div class="icon">
-                     <img src="../img/icons/coffee-cup.png" alt="">
-                  </div>
-                  <div>Breakfast</div>
-               </div>
-               <div class="container_icon middle">
-                  <div class="icon">
-                     <img src="../img/icons/plane3.png" alt="">
-                  </div>
-                  <div>Airport pickup</div>
-               </div>
-               <div class="container_icon bottom">
-                  <div class="icon">
-                     <img src="../img/icons/position.png" alt="">
-                  </div>
-                  <div>City guide</div>
-               </div>
-               <div class="container_icon middle">
-                  <div class="icon">
-                     <img src="../img/icons/bbq.png" alt="">
-                  </div>
-                  <div>BBQ party</div>
-               </div>
-               <div class="container_icon top">
-                  <div class="icon">
-                     <img src="../img/icons/room.png" alt="">
-                  </div>
-                  <div>Luxury room</div>
-               </div>
-            </div>
-
-            <div class="core_features_title">Core Features</div>
-            <div class="container_offers">
-               <div class="item img img1">
-
-               </div>
-               <div class="item">
-                  <div class="icon">
-                     <img src="../img/icons/clock.png" alt="">
-                  </div>
-                  <div class="title">Quiet Hours</div>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, unde?</p>
-               </div>
-               <div class="item img img2">
-                  
-               </div>
-               <div class="item">
-                  <div class="icon">
-                     <img src="../img/icons/delete_clock.png" alt="">
-                  </div>
-                  <div class="title">Free Cancellation</div>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, unde?</p>
-               </div>
-               <div class="item img img3">
-                  
-               </div>
-               <div class="item">
-                  <div class="icon">
-                     <!-- <img src="../img/icons/percentage.png" alt=""> -->
-                     <img src="../img/icons/percentage.png" alt="">
-                  </div>
-                  <div class="title">Special Offers</div>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, unde?</p>
-               </div>
-            </div>
-         </section>
-            <!-- ROOM TYPE -->
-         <section class="room_type">
-            <div class="subtitle">Room type</div>
-            <div class="title">Inspired lodging</div>
-            <ul>
-               <li>Luxury</li>
-               <li>Family</li>
-               <li>Double Bed</li>
-               <li>Relax</li>
-            </ul>
-            <div class="room_grid">
-               <div class="room junior">
-                  <div class="subtitle"><i class="far fa-calendar-alt"></i> 12 ROOMS</div>
-                  <div class="title">Junior Suite</div>
-               </div>
-               <div class="room junior">
-                  <div class="subtitle"><i class="far fa-calendar-alt"></i> 12 ROOMS</div>
-                  <div class="title">Junior Suite</div>
-               </div>
-               <div class="room hallFame">
-                  <div class="subtitle"><i class="far fa-calendar-alt"></i>03 ROOMS</div>
-                  <div class="title">Luxury Hall Of Fame</div>
-               </div>
-            </div>
-         </section>
-            <!-- CALL TO ACTION -->
-         <section class="call_action">
-            <div class="subtitle">Call to action</div>
-            <div class="title">The thin Escape</div>
-            
-            <div>
-               <div class="header">
-                  <div class="desc">Miranda has everything for your trip & every single thing.</div>
-                  <div class="btn"><button class="button button_black">Take a tour</button></div>
-               </div>
-
-               <div class="actions_grid">
-                  <div class="container_icon">
+            <section class="services">
+               <div class="subtitle"><span class="">Since</span> <span class="colorBrown">1994</span> </div>
+               <div class="title">Situated in prime position at the foot of the slopes of couchevel moriond.</div>
+               <!-- ICONS -->
+               <div class="container_icons">
+                  <div class="container_icon top">
                      <div class="icon">
+                        <img src="../img/icons/coffee-cup.png" alt="">
+                     </div>
+                     <div>Breakfast</div>
+                  </div>
+                  <div class="container_icon middle">
+                     <div class="icon">
+                        <img src="../img/icons/plane3.png" alt="">
+                     </div>
+                     <div>Airport pickup</div>
+                  </div>
+                  <div class="container_icon bottom">
+                     <div class="icon">
+                        <img src="../img/icons/position.png" alt="">
+                     </div>
+                     <div>City guide</div>
+                  </div>
+                  <div class="container_icon middle">
+                     <div class="icon">
+                        <img src="../img/icons/bbq.png" alt="">
+                     </div>
+                     <div>BBQ party</div>
+                  </div>
+                  <div class="container_icon top">
+                     <div class="icon">
+                        <img src="../img/icons/room.png" alt="">
+                     </div>
+                     <div>Luxury room</div>
+                  </div>
+               </div>
+               
+               <div class="core_features_subtitle">Facilities</div>
+               <div class="core_features_title">Core Features</div>
+               <div class="container_offers">
+                  <div class="item img img1">
+                     
+                  </div>
+                  <div class="item">
+                     <div class="icon">
+                        <img src="../img/icons/services_features/clock.png" alt="">
+                     </div>
+                     <div class="title">Quiet Hours</div>
+                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, unde?</p>
+                  </div>
+                  <div class="item img img2">
+                     
+                  </div>
+                  <div class="item">
+                     <div class="icon">
+                        <img src="../img/icons/services_features/clock_delete.png" alt="">
+                     </div>
+                     <div class="title">Free Cancellation</div>
+                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, unde?</p>
+                  </div>
+                  <div class="item img img3">
+                     
+                  </div>
+                  <div class="item">
+                     <div class="icon">
+                        <!-- <img src="../img/icons/percentage.png" alt=""> -->
+                        <i class="fa fa-percent features-icon colorBrown" style="opacity: 0.8" aria-hidden="true"></i>
+                     </div>
+                     <div class="title">Special Offers</div>
+                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, unde?</p>
+                  </div>
+               </div>
+            </section>
+            <!-- CARROUSEL -->
+            <section class="carousel">
+               <div class="glider_container">
+                  <div class="glider">
+                     <div class="glider-item"><img src="../img/carousel/carrusel_1.jpg" alt="carousel1"></div>
+                     <div class="glider-item"><img src="../img/carousel/carrusel_2.jpg" alt="carousel2"></div>
+                     <div class="glider-item"><img src="../img/carousel/carrusel_3.jpg" alt="carousel3"></div>
+                     <div class="glider-item"><img src="../img/carousel/carrusel_4.jpg" alt="carousel4"></div>
+                     <div class="glider-item"><img src="../img/carousel/carrusel_5.jpg" alt="carousel5"></div>
+                     <div class="glider-item"><img src="../img/carousel/carrusel_6.jpg" alt="carousel6"></div>
+                  </div>
+                  
+                  <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-left"></i></button>
+                  <button aria-label="Next" class="glider-next"><i class="fas fa-chevron-right"></i></button>
+                  <div role="tablist" class="dots"></div>
+               </div>
+            </section>
+            <!-- ROOM TYPE -->
+            <section class="room_type">
+               <div class="subtitle">Room type</div>
+               <div class="title">Inspired lodging</div>
+               <ul>
+                  <li>Luxury</li>
+                  <li>Family</li>
+                  <li>Double Bed</li>
+                  <li>Relax</li>
+               </ul>
+               <div class="room_grid">
+                  <div class="room junior">
+                     <div class="subtitle"><i class="far fa-calendar-alt"></i> 12 ROOMS</div>
+                     <div class="title">Junior Suite</div>
+                  </div>
+                  <div class="room junior">
+                     <div class="subtitle"><i class="far fa-calendar-alt"></i> 12 ROOMS</div>
+                     <div class="title">Junior Suite</div>
+                  </div>
+                  <div class="room hallFame">
+                     <div class="subtitle"><i class="far fa-calendar-alt"></i>03 ROOMS</div>
+                     <div class="title">Luxury Hall Of Fame</div>
+                  </div>
+               </div>
+            </section>
+            <!-- CALL TO ACTION -->
+            <section class="call_action">
+               <div class="subtitle">Call to action</div>
+               <div class="title">The thin Escape</div>
+               
+               <div>
+                  <div class="header">
+                     <div class="desc">Miranda has everything for your trip & every single thing.</div>
+                     <!-- <div class="btn"><button class="button button_black">Take a tour</button></div> -->
+                  </div>
+                  
+                  <div class="actions_grid">
+                     <div class="container_icon">
+                        <div class="icon">
                         <img src="../img/icons/plane3.png" alt="">
                      </div>
                   </div>
@@ -327,12 +355,12 @@
                bath, wi-fi, cable television and include full breakfast
             </div>
          </section>
-            <!-- NEWS FEEDS -->
+            <!-- NEWS FEED -->
          <section class="new_feeds">
             <div class="head">
                <div class="titles">
                   <div class="subtitle">Blog</div>
-                  <div class="title">News Feeds</div>
+                  <div class="title">News Feed</div>
                </div>
 
                <div class="arrows">
@@ -367,27 +395,28 @@
                         sit pariatur, dolore nisi labore corporis.</p>
                   </div>
                </div>
+
+               <div class="body_item item3">
+                  <div class="feed_img"></div>
+                  <div class="content">
+                     <div class="subtitle">
+                        <div><i class="far fa-calendar-alt"></i> 23rd March 2019 </div>
+                        <div><i class="far fa-user"></i> By Admin</div>
+                     </div>
+                     <div class="title">Each of our 8 double rooms has its own distinct.</div>
+                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio 
+                        sit pariatur, dolore nisi labore corporis.</p>
+                  </div>
+               </div>
             </div>
          </section>
-            <!-- CARROUSEL
-         <section class="carrousel">
-            <div class="back">
-               <div><img src="../img/yard.jpg" alt=""></div>
-               <div><img src="../img/yard.jpg" alt=""></div>
-               <div><img src="../img/yard.jpg" alt=""></div>
-               <div><img src="../img/yard.jpg" alt=""></div>
-               <div><img src="../img/yard.jpg" alt=""></div>
-               <div><img src="../img/yard.jpg" alt=""></div>
-            </div>
-            <div class="top"></div>
-         </section> -->
       </div>
 
 
    </main>
 
    <!-- FOOTER -->
-   <footer>     
+   <footer> 
       <!-- BODY -->
       <div class="body">
          <div class="logo_section">
@@ -450,25 +479,25 @@
       </div>
       <!-- COPYRIGHT -->
       <div class="copy">
-         copyright by@example
+         copyright by@DanielRevenga
       </div>
       <!-- RRSS -->
       <div class="rrss">
          <div>
-            <i class="fab fa-facebook-f"></i>
+            <a href="https://github.com/DanielRevenga"><i class="fab fa-github"></i></a> 
          </div>
          <div>
-            <i class="fab fa-twitter"></i>
+            <a href="https://www.linkedin.com/in/daniel-revenga-mern-stack/"><i class="fab fa-linkedin"></i></a> 
+         </div>
+         <!-- <div>
+            <a href=""><i class="fab fa-twitter"></i></a> 
          </div>
          <div>
-            <i class="fab fa-instagram-square"></i>
+            <a href=""><i class="fab fa-instagram-square"></i></a> 
          </div>
          <div>
-            <i class="fab fa-linkedin"></i>
-         </div>
-         <div>
-            <i class="fab fa-youtube"></i>
-         </div>
+            <a href=""><i class="fab fa-youtube"></i></a> 
+         </div> -->
       </div>
    </footer>
 </body>

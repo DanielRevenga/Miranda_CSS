@@ -8,12 +8,17 @@
    font-size: 1em;
    font-family: 'Roboto', sans-serif;
    position: relative;
+   font-size: 0.94em;
    z-index: 2;
 //    font-family: 'Old Standard TT', serif;
 }
 
+
+
+// COLORS
 $black_std: #222222;
 $grey_dark: #393939;
+$grey_dark_2: #292929;
 $grey: #777777;
 $grey_light: #cacaca;
 $grey_light_2: #DBDBDB;
@@ -22,7 +27,12 @@ $brown: #BEAD8E;
 $brown_light: #CCC2BE;
 $hm: #F7F7F7;
 
+// FONT SIZES
+$main_titles_d: 4.5em;
+$main_subtitles_d: 1.6em;
+
 $desktop: 1024px;
+
 
 .flex{
     display: flex;
@@ -78,22 +88,39 @@ ul{
         color: #fff;
         background-color: transparent;
         font-size: 1.7em;
-        padding: 20px 44px;
+        padding: 17px 50px;
         margin-bottom: 30px;
     }
 
     &.button_brown{
         background-color: $brown;  
+        border: 1px solid #ffffff6e;
+
+        &:hover{
+            // color: $brown;  
+            filter: brightness(110%);
+            transform: scale(1.025);
+        }
     }
    
     &.button_grey{
         background-color: $grey_dark;
         border: 1px solid #ffffff6e;
+
+        &:hover{
+            filter: brightness(120%);
+            transform: scale(1.025);
+        }
     }
 
     &.button_black{
         background-color: #111111;
         border: 1px solid #ffffff6e;
+
+        &:hover{
+            filter: brightness(110%);
+            transform: scale(1.025);
+        }
     }
 }
 
@@ -102,6 +129,7 @@ body, html{
    margin: 0;
    padding: 0;
    width: 100%;
+   overflow-x: hidden;
 }
 
 // HEADER
@@ -115,7 +143,7 @@ header{
     z-index: 999;
     @media only screen and (min-width: $desktop) {
         padding: 10px 20px;
-        width: 100%;
+        width: 99.1vw;
         margin: 0;
     }
  
@@ -124,6 +152,7 @@ header{
         // width: 50%;
         @media only screen and (min-width: $desktop) {
             width: 100%;
+            margin: 0;
         }
 
         .bars{
@@ -150,11 +179,13 @@ header{
                 visibility: visible;
                 position: relative;
                 display: flex;
+                justify-content: space-between;
                 top: 0;
                 left: 0;
-                width: 100%;
-                font-size: .9em;
                 padding: 0;
+                padding-left: 5%;
+                width: 100%;
+                font-size: 1em;
                 background-color: $grey_dark;
                 color: #fff;
             }
@@ -178,13 +209,14 @@ header{
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
-                width: 0;     
+                width: 0;
                 overflow: hidden;
                 list-style-type: none; 
                 @media only screen and (min-width: $desktop) {
                     flex-direction: row;
                     overflow: hidden;
-                    width: 40%;
+                    min-width: 32%;
+                    
                 }
     
                 &.active{
@@ -203,22 +235,27 @@ header{
                         margin: 0;
                         width: 20%;
                         font-size: .7em;
+                        height: 55%;
                     }
                     
                     a{
                         background-color: transparent !important;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         width: 100%;
                         padding: 12px 30px;
-                        display: block;
                         @media only screen and (min-width: $desktop) {
                             margin: 0 !important;
-                            padding: 15px 10px !important;
+                            padding: 15px 40px !important;
                             height: 100%;
                             text-align: center;
                             border-radius: 8px;
 
                             &:hover{
                                 background-color: $grey !important;
+                                // color: $black_std;
+                                font-weight: bold;
                             }
                         }
                     }
@@ -235,18 +272,27 @@ header{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 30%;
+                    width: 20%;
+                    padding-left: 8%;
                 }
-         
-                .logoH{
-                    font-size: 40px;
-                    font-weight: bold;
-                    padding: 8px 14px;
-                    background-color: #fff;
-                    color: $grey_dark;
-                    text-align: center;
-                    margin-right: 15px;
+                
+
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .logoH{
+                        font-size: 40px;
+                        font-weight: bold;
+                        padding: 8px 14px;
+                        background-color: #fff;
+                        color: $grey_dark;
+                        text-align: center;
+                        margin-right: 15px;
+                    }
                 }
+                
             }
         }
          
@@ -262,11 +308,12 @@ header{
             @media only screen and (min-width: $desktop) {
                 color: #fff;
                 flex-direction: row;
-                width: 30%;
-                font-size: 1.2em;
+                justify-content: flex-end;
+                width: 40%;
+                font-size: 1.4em;
 
                 .container_headerInfo_phone, .container_headerInfo_email{
-                    display: flex;
+                    display: flex;                 
                     
                     &:first-child{
                         margin-right: 20px;
@@ -312,7 +359,8 @@ header{
                     }
 
                     .data{
-                        font-size: .75em;
+                        font-size: 0.9em;
+                        letter-spacing: 1px;
                     }
                 }
             }
@@ -392,7 +440,7 @@ footer{
     text-transform: uppercase; 
     @media only screen and (min-width: $desktop) {
         height: fit-content;
-        font-size: 1.5em;
+        font-size: 1.7em;
         flex-wrap: wrap;
         padding: 100px 50px 75px 50px;
         margin-top: 120px;
@@ -522,7 +570,7 @@ footer{
         font-size: 1.2em;
         @media only screen and (min-width: $desktop) {
             font-size: 1.5em;
-            width: 30%;
+            width: 15%;
         }
 
         div{
@@ -536,7 +584,9 @@ footer{
             height: 40px;
             cursor: pointer;
             @media only screen and (min-width: $desktop) {
-                height: 70px;
+                height: 90px;
+                font-size: 1.3em;
+                border-radius: 6px;
             }
 
             &:hover{
