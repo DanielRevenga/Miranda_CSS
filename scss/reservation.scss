@@ -27,7 +27,7 @@
         display: flex;   
         // background-color: $grey_dark;
         background-image: url("../img/home2.jpg");
-        background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url("../img/home2.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.3)) , url("../img/home2.jpg");
         background-size: cover;
         position: relative;
         flex-flow: column;
@@ -109,7 +109,7 @@
 
         // MAIN CONTENT HEADER 2
         .mainContent_header2 {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) , url("../img/random_room2.jpg");
+            background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.1)) , url("../img/random_room2.jpg");
             background-size: cover;
             background-position: center;
             height: 38vh;
@@ -654,6 +654,7 @@
                     }
 
                     h3{
+                        border-bottom: 1px solid transparent;
                         font-family: $oldStd;
                         @media only screen and (min-width: $desktop) {
                             font-size: 3rem;
@@ -691,6 +692,7 @@
                     .booking{
                         font-weight: bold;
                         color: $grey_light;
+                        border-bottom: 1px solid transparent;
 
                         &:hover{
                             border-bottom: 2px solid $grey_light;

@@ -394,6 +394,7 @@ header .container_logoH .logoH .bold {
     height: 60px;
     width: 60px;
     font-size: 2.5em;
+    color: #fff;
     z-index: 100;
   }
   .anchorTop:hover {
@@ -1540,6 +1541,7 @@ header .container_logoH .logoH .bold {
     height: 60px;
     width: 60px;
     font-size: 2.5em;
+    color: #fff;
     z-index: 100;
   }
   .anchorTop:hover {
@@ -3186,6 +3188,7 @@ header .container_logoH .logoH .bold {
     height: 60px;
     width: 60px;
     font-size: 2.5em;
+    color: #fff;
     z-index: 100;
   }
   .anchorTop:hover {
@@ -3982,6 +3985,7 @@ header .container_logoH .logoH .bold {
     height: 60px;
     width: 60px;
     font-size: 2.5em;
+    color: #fff;
     z-index: 100;
   }
   .anchorTop:hover {
@@ -4863,6 +4867,7 @@ header .container_logoH .logoH .bold {
     height: 60px;
     width: 60px;
     font-size: 2.5em;
+    color: #fff;
     z-index: 100;
   }
   .anchorTop:hover {
@@ -5096,7 +5101,7 @@ footer .rrss div:hover {
 #reservation .mainContent .mainContent_header {
   display: flex;
   background-image: url("../img/home2.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../img/home2.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.3)), url("../img/home2.jpg");
   background-size: cover;
   position: relative;
   flex-flow: column;
@@ -5173,7 +5178,7 @@ footer .rrss div:hover {
   }
 }
 #reservation .mainContent .header2_availability .mainContent_header2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url("../img/random_room2.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.1)), url("../img/random_room2.jpg");
   background-size: cover;
   background-position: center;
   height: 38vh;
@@ -5703,6 +5708,7 @@ footer .rrss div:hover {
   border-bottom: 1px solid #111;
 }
 #reservation .mainContent .related_rooms .related_room .room_footer a.room_footer_title h3 {
+  border-bottom: 1px solid transparent;
   font-family: "Old Standard TT", serif;
 }
 @media only screen and (min-width: 1024px) {
@@ -5741,6 +5747,7 @@ footer .rrss div:hover {
 #reservation .mainContent .related_rooms .related_room .room_footer .info .booking {
   font-weight: bold;
   color: #cacaca;
+  border-bottom: 1px solid transparent;
 }
 #reservation .mainContent .related_rooms .related_room .room_footer .info .booking:hover {
   border-bottom: 2px solid #cacaca;
@@ -6148,6 +6155,7 @@ header .container_logoH .logoH .bold {
     height: 60px;
     width: 60px;
     font-size: 2.5em;
+    color: #fff;
     z-index: 100;
   }
   .anchorTop:hover {
