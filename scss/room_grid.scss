@@ -42,6 +42,7 @@
          font-size: 0.8em;
          letter-spacing: 2px;
          margin-bottom: 5px;
+         font-family: $archivo;
       }
 
       .secondary_nav{
@@ -56,27 +57,37 @@
          left: 75%;
          font-size: .6em;
          font-weight: bold;
+         @media only screen and (min-width: $desktop) {
+            font-size: 1.4rem;
+         }
 
          div{
-            color: $black_std;
-            a{
-               color: $brown;
-            }
+            color: $brown;
 
             span{
-               a{
-                  color: $black_std;
-               }
+                color: $black_std;   
+                
+                a{
+                    color: $black_std;
+
+                    &:hover{
+                        border-bottom: 1px solid  $black_std;
+                    }                                       
+                }
             }
-         }
+        }
       }
    }
 
    .mainContent_body{
       @media only screen and (min-width: $desktop) {
-         width: 70vw;
          margin-left: auto;
          margin-right: auto;
+         & > div, & > section{
+            padding-left: 20vw;
+            padding-right: 20vw;
+            width: 100vw;
+         }
       }
 
       .rooms{
@@ -93,13 +104,18 @@
             margin-bottom: 20px;
             @media only screen and (min-width: $desktop) {
                width: 32%;
-               
+               box-shadow: 20px 13px 44px -8px rgba(0,0,0,0.15);
             }
    
-            .room_img{
+            a.room_img_link {
+               display: block;
                height: 225px;
                width: 100%;
-               background-size: cover;           
+               .room_img{
+                  height: 100%;
+                  width: 100%;
+                  background-size: cover;           
+               }
             }
    
             &:nth-of-type(2n){
@@ -115,7 +131,7 @@
             }
    
             .room_body{
-               width: 65%;
+               width: 70%;
    
                .icon_list{
    
@@ -128,21 +144,35 @@
                      color: $grey;
                      font-size: 0.8em;
                      @media only screen and (min-width: $desktop) {
-                        font-size: 1.2em;
+                        font-size: 1.4rem;
                      }
                   }
                }
    
                .body_info{
                   padding: 10px;
+                  font-family: $roboto;
                   @media only screen and (min-width: $desktop) {
-                     font-size: 1.25em;
+                     font-size: 1.25rem;
                   }
    
-                  .title{
-                     font-size: 1.1em;
-                     font-family: 'Old Standard TT', serif;
-                     margin: 10px 0;
+                  a {
+                     display: block;
+                     color: #111;
+
+                     &:hover{
+                        
+                        .title{
+                           border-bottom: 1px solid #111;
+                        }
+                     }
+
+                     .title{
+                        font-size: 1.5rem;
+                        font-family: 'Old Standard TT', serif;
+                        margin: 10px 0;
+                        border-bottom: 1px solid transparent;                   
+                     }
                   }
    
                   p{
@@ -154,14 +184,15 @@
             }
    
             .extra_info{
-               width: 34%;
+               width: 29%;
                display: flex;
                flex-direction: column;
                align-items: center;
-               overflow: auto;
-               padding: 40px 10px 0 10px;
+               overflow: hidden;
+               padding: 40px 10px 0 0;
+               font-family: $archivo;
                @media only screen and (min-width: $desktop) {
-                  font-size: 1.2em;
+                  font-size: 1.8em;
                }
                
                .price{
@@ -182,10 +213,19 @@
                   margin-bottom: 10px;
                }
    
-               .booking{
-                  font-size: 0.7em;
-                  font-weight: bold;
-                  color: $grey_light;
+               a {
+                  display: block;
+                  
+                  &:hover{
+                     border-bottom: 2px solid $grey_light_2;;
+                  }
+                  
+                  .booking{
+                     font-size: 0.75em;
+                     font-weight: bold;
+                     color: $grey_light;
+
+                  }
                }
             }
          }

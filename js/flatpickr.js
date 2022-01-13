@@ -10,4 +10,4 @@ const runFlatpickr = () => {
     
 };
 
-export default runFlatpickr;
+// export default runFlatpickr;

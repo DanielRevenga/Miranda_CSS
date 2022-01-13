@@ -4,12 +4,15 @@
     z-index: 1;
   // MAIN CONTENT
   .mainContent{
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
 
-    & > section {
+    & > div, & > section {
         @media only screen and (min-width: $desktop) {
-            width: 70vw;
-            margin-right: auto !important;
-            margin-left: auto !important;
+            padding-left: 20vw;
+            padding-right: 20vw;
+            width: 100vw;
 
             &:first-of-type{
                 width: 100%;
@@ -62,7 +65,7 @@
            margin-bottom: 5px;
         }
   
-            .secondary_nav{
+        .secondary_nav{
             position: absolute;
             display: flex;
             justify-content: center;
@@ -77,20 +80,23 @@
             display: none;
             @media only screen and (min-width: $desktop) {
                 display: flex;
+                font-size: 1.4rem;
             }  
   
-           div{
-              color: $black_std;
-              a{
-                 color: $brown;
-              }
-  
-              span{
-                 a{
-                    color: $black_std;
-                 }
-              }
-           }
+            div{
+                color: $brown;
+                span{
+                    color: $black_std;   
+
+                    a{
+                        color: $black_std;
+
+                        &:hover{
+                            border-bottom: 1px solid  $black_std;
+                        }                                                     
+                    }
+                }
+            }
         }
      }
 
@@ -110,10 +116,9 @@
             color: rgb(34, 34, 34);
             margin-top: 10px;     
             @media only screen and (min-width: $desktop) {
-                width: 65%;
+                width: 63%;
                 font-size: 1.4em;
-                height: 50vh;
-                
+                height: 60vh;           
             }  
 
             .extra-banner {
@@ -124,17 +129,23 @@
                 background-color: white;
                 padding: 0 20px 15px 15px;
                 
-
                 h1 {
                     font-family: 'Old Standard TT', serif;
                     font-size: 1.5em;
-                    padding: 10px 10px;
+                    padding: 0 10px 10px 50px;
                     font-weight: normal;
+                    @media only screen and (min-width: $desktop) {
+                        font-size: 2rem;         
+                    } 
                 }
 
                 .price {
                     color: rgb(211, 183, 150);
                     font-weight: bolder;
+                    font-family: $archivo;
+                    @media only screen and (min-width: $desktop) {
+                        font-size: 1.8rem;         
+                    } 
                     
                     p {
                         color: $brown;
@@ -152,8 +163,10 @@
         .availability{
             margin: 20px auto;
             width: 95%;
+            font-size: 1.3em;
+            font-family: $archivo;
             @media only screen and (min-width: $desktop) {
-                width: 30%;
+                width: 32%;
                 margin: 0;
             }  
 
@@ -189,6 +202,10 @@
                         font-weight: bold;
                         margin-bottom: 5px;
                         display: block;
+                        @media only screen and (min-width: $desktop) {
+                            margin-bottom: 10px;
+                        }  
+    
                     }
 
                     input{
@@ -197,7 +214,23 @@
                         background-color: $grey_light_3;
                         outline: none;
                         border: 1px solid $grey_light_2;
-                        padding: 10px 20px;
+                        padding: 15px 30px;
+
+                        &.flatpickr{
+                            border: none;
+                            border-bottom: 3px solid $brown;
+                            padding: 15px 30px 15px 30px;
+
+                            &:active{
+                                border: none;
+                                border-bottom: 3px solid $brown;
+                            }
+                            &:focus{
+                                outline: none;
+                                border: none;
+                                border-bottom: 3px solid $brown;
+                            }
+                        }
                     }
 
                     &.textarea-control{
@@ -212,6 +245,7 @@
                             padding: 10px 20px;
                             @media only screen and (min-width: $desktop) {
                                 margin-bottom: 20px;
+                                font-size: 1rem;
                             }  
                         }
                     }
@@ -220,7 +254,7 @@
 
             .check-button {
                 margin: auto;
-                text-align: center;
+                text-align: center;              
                 
                 .checkButton {
                     background-color: rgb(211, 183, 150);
@@ -230,6 +264,10 @@
                     font-weight: 700;
                     color: white;
                     cursor: pointer;
+                    @media only screen and (min-width: $desktop) {
+                        width: 100%;
+                        font-size: 1.1rem;
+                    }  
                 }
             }
             
@@ -239,17 +277,27 @@
     // ARTICLE
     .article {
         background-color: $grey_light_3;
-        width: 90%;
+        width: 100%;
         margin: auto;
-        padding: 10px;
+        padding-top: 35px;
+        padding-bottom: 35px;
         text-align: justify;
         font-size: 0.9em;
+        font-family: $roboto;
         @media only screen and (min-width: $desktop) {
-            width: 70vw;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 1.1em;
+            margin: 0;
+            font-size: 1.3rem;
             margin-top: 60px;
+            margin-bottom: 60px;
+
+            p{
+                line-height: 1.4;
+                margin-top: 10px;
+
+                &:nth-child(1){
+                    margin-top: 0;
+                }
+            }
         }  
     }// article
 
@@ -258,12 +306,20 @@
         width: 95%;
         margin: 20px auto;
         @media only screen and (min-width: $desktop) {
-            width: 70vw;
-            margin: 0 auto 60px auto;
+            // width: 70vw;
+            // margin: 0 auto 60px auto;   
+            width: 100%;
+            margin: 0;
+            font-size: 1.3em;   
         }     
 
         h4 {
             font-size: 1.4em;
+            font-family: $oldStd;
+            @media only screen and (min-width: $desktop) {
+                font-size: $main_titles_d;  
+                font-weight: normal;
+            }  
         }
         hr {
             border-bottom: 1px solid transparent;
@@ -275,7 +331,7 @@
             grid-template-columns: 1fr 1fr 1fr;
             font-size: 0.9em;
             @media only screen and (min-width: $desktop) {
-                font-size: 1.2em;
+                font-size: 1.6rem;
             }     
     
             .column-one,
@@ -304,15 +360,14 @@
         }         
     }// Amenities
 
-    // TESTIMONIALS
-    .testimonials{
-        margin-bottom: 30px;     
+      // TESTIMONIALS
+      .testimonials{
+        margin-bottom: 30px;        
         @media only screen and (min-width: $desktop) {
            margin-top: 120px;
         }  
 
         .head{
-           padding-left: 10px;
 
            .subtitle{
               color: $grey;
@@ -321,16 +376,20 @@
               text-transform: uppercase;
               margin-bottom: 5px;
               font-size: 1em;
+              font-family: $archivo;
+              @media only screen and (min-width: $desktop) {
+                 font-size: $main_subtitles_d;
+              }  
            }
 
            .title{
               font-size: 2em;
               text-transform: capitalize;
               margin-bottom: 15px;
-              font-family: 'Old Standard TT', serif;
+              font-family: $oldStd;
               font-size: 2.5em;
               @media only screen and (min-width: $desktop) {
-                 font-size: 3em;
+                 font-size: $main_titles_d;
               }  
            }        
         }
@@ -343,80 +402,86 @@
               font-size: 1.8em;
            }  
 
-            .client_card{
-                display: flex;
-                flex-direction: column;
-                align-items: center;  
-                justify-content: space-between;    
-                border: 1px solid $brown;
-                padding: 10px;
-                width: 49%;  
-                @media only screen and (min-width: $desktop) {
+           .client_card{
+              display: flex;
+              flex-direction: column;
+              align-items: center;  
+              justify-content: space-between;    
+              border: 1px solid $brown;
+              padding: 10px;
+              width: 49%;  
+              @media only screen and (min-width: $desktop) {
                     font-size: 1.2em;
                     z-index: 2;
-                }    
+              }    
 
-                .img_container{
+              .img_container{
+                 border-radius: 50%;
+                 width: 50%;
+                 position: relative;
+                 margin-bottom: 20px;
+                 // height: 40px;
+
+                 img{
+                 border-radius: 50%;
+                 width: 100%;
+                 height: 100%;
+                 }
+
+                 .check{
+                    color: #fff;
                     border-radius: 50%;
-                    width: 50%;
-                    position: relative;
-                    margin-bottom: 20px;
-                    // height: 40px;
+                    font-size: .6em;
+                    border: 2px solid #fff;
+                    padding: 8px;
+                    background-color: $brown;
+                    position: absolute;
+                    top: 0;
+                    right: 2%;
+                    z-index: 10;
+                    @media only screen and (min-width: $desktop) {
+                       font-size: .9em;
+                       top: 5%;
+                       right: 5%;
+                    }  
+                 }        
+              }
 
-                    img{
-                    border-radius: 50%;
-                    width: 100%;
-                    height: 100%;
-                    }
-
-                    .check{
-                        color: #fff;
-                        border-radius: 50%;
-                        font-size: .6em;
-                        border: 2px solid #fff;
-                        padding: 8px;
-                        background-color: $brown;
-                        position: absolute;
-                        top: 0;
-                        right: 2%;
-                        z-index: 10;
-                        @media only screen and (min-width: $desktop) {
-                           font-size: .9em;
-                           top: 5%;
-                           right: 5%;
-                        }  
-                    }       
-                }
-
-                .name{
+              .name{
                     font-size: 1.1em;
-                    font-family: 'Old Standard TT', serif;
+                    font-family: $oldStd;
                     margin-bottom: 5px;
-                }
+                    @media only screen and (min-width: $desktop) {
+                       font-size: 1.9rem;
+                    } 
+              }
 
-                .role{
+              .role{
                     color: $brown;
                     letter-spacing: 2px;
                     font-weight: bold;
                     font-size: .8em;
                     margin-bottom: 15px;
                     @media only screen and (min-width: $desktop) {
-                    font-size: .7em;
+                       font-size: 1.1rem;
+                       margin-bottom: 10px;
                     } 
-                }
+              }
 
-                p{
+              p{
                     font-size: .7em;
                     text-align: center;
+                    font-family: $archivo;
                     @media only screen and (min-width: $desktop) {
-                        font-size: .6em;
+                       font-size: 1rem;
                     }   
-                }
-            }
+              }
+           }
         }
 
         .info{
-           background-image: url("../img/hotel_view.jpg");
+           // background-image: url("../img/hotel_view.jpg");
+           background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) , url("../img/hotel_view.jpg");
            background-size: cover;
            color: #fff;
            padding: 5px 15px;
@@ -426,26 +491,33 @@
            font-size: 1.3em;
            text-shadow: 2px 2px #474545;
            line-height: 1.4;
-           font-family: 'Old Standard TT', serif;
+           font-family: $oldStd;
            @media only screen and (min-width: $desktop) {
               margin-top: 20px;
               padding: 75px 20%;
               letter-spacing: 2px;
-              font-size: 2.5em;
+              font-size: 3.5em;
+              min-height: 40vh;
+              max-height: fit-content;
            }  
         }
-    }// testimonials
+     }// testimonials
 
     // CANCELATION
     .cancelation{
         font-size: 1.1em;
         padding: 20px;
         @media only screen and (min-width: $desktop) {
-            width: 70vw !important;
-            margin-right: auto !important;
-            margin-left: auto !important;
-            font-size: 1.5em;
+            padding-left: 20vw;
+            padding-right: 20vw;
+            margin-bottom: 60px;
+            width: 100vw;
         }  
+
+        h4{
+            font-size: $main_titles_d;
+            font-family: $oldStd;
+        }
       
         hr{
             border-bottom: 1px solid transparent;
@@ -457,6 +529,10 @@
         p{
             font-size: 0.8em;
             text-align: justify;
+            font-family: $archivo;
+            @media only screen and (min-width: $desktop) {
+                font-size: 1.2rem;
+            }  
         }
     }// cancelation
 
@@ -468,9 +544,9 @@
         display: flex;
         justify-content: center;
         @media only screen and (min-width: $desktop) {
-            width: 70vw;
-            margin-left: auto;
-            margin-right: auto;
+            // width: 70vw;
+            // margin-left: auto;
+            // margin-right: auto;
             height: 65vh;
         }  
 
@@ -483,41 +559,64 @@
     // RELATED ROOMS
     .related_rooms{
         @media only screen and (min-width: $desktop) {
-            width: 70vw !important;
-            margin-right: auto !important;
-            margin-left: auto !important;
+            // width: 70vw !important;
+            // margin-right: auto !important;
+            // margin-left: auto !important;
+            margin-top: 60px;
         }  
 
-        .related_room{   
+        .related_room{  
+            box-shadow: 20px 13px 44px -8px rgba(0,0,0,0.20);
+            @media only screen and (min-width: $desktop) {
+                margin-bottom: 40px;
+            } 
 
-            .room-image{
-                position: relative;
-                height: 225px;
-                width: 100%;
-                @media only screen and (min-width: $desktop) {
-                    height: 60vh;
-                }  
+            & > a {
+                display: block;
 
-                .icons-bar{
-                    position: absolute;
-                    bottom: -20px;
-                    display: flex;
-                    justify-content: center;
+                .room-image{
+                    position: relative;
+                    height: 225px;
                     width: 100%;
-                    height: 40px;
-
-                    ul{
-                        width: 90%;
+                    @media only screen and (min-width: $desktop) {
+                        height: 60vh;
+                    }  
+    
+                    .icons-bar{
+                        position: absolute;
+                        bottom: -20px;
                         display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        background-color: #fff;
-                        padding: 6px 15px;
-                        box-shadow: 10px 10px 31px -12px rgba(0,0,0,0.5);
-                        color: $grey;
-                        font-size: 0.8em;
-                    }
-                }         
+                        justify-content: center;
+                        width: 100%;
+                        height: 40px;
+                        z-index: 20;
+    
+                        ul{
+                            width: 90%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            background-color: #fff;
+                            padding: 6px 15px;
+                            box-shadow: 10px 10px 31px -12px rgba(0,0,0,0.5);
+                            color: $grey;
+                            font-size: 0.8em;
+                            border-radius: 6px;
+                            position: relative;
+                            z-index: 200;
+                            @media only screen and (min-width: $desktop) {
+                                li{
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    height: 100%;
+                                    width: 100%;
+                                    font-size: 3em;
+                                }
+                            }  
+                        }
+                    }         
+                }
             }
             
             &:nth-of-type(1){
@@ -543,14 +642,41 @@
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
-                @media only screen and (min-width: $desktop) {
-                    font-size: 1.3em;
-                }  
+
+                a.room_footer_title {
+                    display: block;
+                    color: #111;
+
+                    &:hover{
+                        h3 {
+                            border-bottom: 1px solid #111;
+                        }
+                    }
+
+                    h3{
+                        font-family: $oldStd;
+                        @media only screen and (min-width: $desktop) {
+                            font-size: 3rem;
+                        }  
+                    }
+                }
+
+                p{
+                    text-align: center;
+                    font-family: $archivo;
+                    @media only screen and (min-width: $desktop) {
+                        font-size: 1.2rem;
+                    }  
+                }
 
                 .info{
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    font-family: $archivo;
+                    @media only screen and (min-width: $desktop) {
+                        font-size: 1.6rem;
+                    }  
 
                     .price{
                         color: $brown;
@@ -565,20 +691,26 @@
                     .booking{
                         font-weight: bold;
                         color: $grey_light;
+
+                        &:hover{
+                            border-bottom: 2px solid $grey_light;
+                        }
                     }
                 }
 
-                p{
-                    text-align: center;
-                }
+               
             }
         }
         
         h2{
             padding-left: 10px;
             font-size: 1.9em;
-            font-family: 'Old Standard TT', serif;
             font-weight: normal;
+            font-family: $oldStd;
+            @media only screen and (min-width: $desktop) {
+                font-size: $main_titles_d;
+                padding: 0;
+            } 
         }
     }
     

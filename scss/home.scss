@@ -23,28 +23,37 @@
          align-items: center;
          height: 80vh;
          width: 100vw;
-         padding-top: 100px;
+         padding-top: 200px;
 
          .buttons{
             margin-top: 40px;
          }
+
+         br{
+            display: block;
+            margin-top: 200px;
+         }
       }
 
       .title{
-         font-family: 'Old Standard TT', serif;
-         background-color: #fff;
-         color: $grey_dark;
-         font-size: 2.2em;
-         margin-bottom: 30px;
-         padding: 2px;
-         width: fit-content;
-         @media only screen and (min-width: $desktop) {
-            color: #fff;
-            background-color: transparent;
-            font-size: 8em;
-            line-height: 1;
+         font-family: $oldStd;
+
+         div{
+            background-color: #fff;
+            color: $grey_dark;
+            font-size: 2.2em;
             margin-bottom: 30px;
-            text-align: center;
+            padding: 2px;
+            width: fit-content;
+            @media only screen and (min-width: $desktop) {
+               color: #fff;
+               background-color: transparent;
+               font-size: 9em;
+               line-height: 1;
+               margin-bottom: 30px;
+               text-align: center;
+               margin: 0 auto;
+            }
          }
       }
 
@@ -52,9 +61,12 @@
          letter-spacing: 2px;
          margin-bottom: 10px;
          display: none;
+         font-weight: bold;
+         font-family: $archivo;
          @media only screen and (min-width: $desktop) {
             display: block;
             font-size: 1.5em;
+            margin-bottom: 20px;
          }
       }
 
@@ -78,7 +90,7 @@
             width: 100vw;
          }
       }
-
+      // FORM AVAILABILITY
       .form_availability{
          display: flex;
          position: relative;
@@ -110,6 +122,8 @@
 
             .label{
                font-weight: bold;
+               font-family: $roboto;
+
                @media only screen and (min-width: $desktop) {
                   font-size: 1.5em;
                   margin-bottom: 20px;
@@ -145,8 +159,11 @@
 
          button{
             margin-top: 20px;
+            @media only screen and (min-width: $desktop) {
+               font-size: 1rem;
+            }
          }
-      }
+      }// form availability
 
       // TOUR
       .tour{
@@ -188,6 +205,9 @@
                margin-bottom: 10px;
                letter-spacing: 1px;
                text-transform: uppercase;
+               font-family: $archivo;
+               color: #777777;
+
                @media only screen and (min-width: $desktop) {
                   font-size: $main_subtitles_d;
                } 
@@ -197,7 +217,8 @@
                font-size: 1.75em;
                text-transform: capitalize;
                margin-bottom: 20px;
-               font-family: 'Old Standard TT', serif;
+               font-family: $oldStd;
+
                @media only screen and (min-width: $desktop) {
                   font-size: $main_titles_d;
                } 
@@ -206,21 +227,23 @@
             p{
                line-height: 1.7;
                margin-bottom: 15px;
+               font-family: 'Archivo', sans-serif;
+
                @media only screen and (min-width: $desktop) {
                   font-size: 1.5em;
-               } 
+               }
             }
 
             button{
                display: none;
                @media only screen and (min-width: $desktop) {
                   display: block;
-                  font-size: 1.2em;
+                  font-size: 1rem;
                   margin-top: 40px;
                } 
             }
          }
-      }
+      }// tour
 
       // SERVICES
       .services{
@@ -245,7 +268,7 @@
                align-items: flex-start;
                justify-content: center;            
                font-size: .8em;
-               padding: 90px 2%;
+               padding: 60px 2%;
             }
 
             .container_icon{
@@ -315,6 +338,8 @@
             font-size: 1.2em;
             letter-spacing: 1.5px;
             font-weight: bold;
+            font-family: $archivo;
+
             @media only screen and (min-width: $desktop) {
                font-size: 1.6em;
                text-align: center;
@@ -328,6 +353,8 @@
             text-align: center;
             text-transform: capitalize;
             margin-bottom: 10px;
+            font-family: $oldStd;
+
             @media only screen and (min-width: $desktop) {
                font-size: $main_titles_d;
                margin-bottom: 40px;
@@ -341,6 +368,8 @@
             font-size: 3.5em;         
             margin-bottom: 60px;
             display: none;
+            font-family: $oldStd;
+
             @media only screen and (min-width: $desktop) {
                display: block;
                font-size: $main_titles_d;
@@ -351,6 +380,8 @@
          .core_features_subtitle{
             text-align: center;
             margin-top: 60px;
+            font-family: $archivo;
+
             @media only screen and (min-width: $desktop) {
                display: block;
                font-size: $main_subtitles_d;
@@ -365,13 +396,9 @@
             grid-template-rows: 1fr 1fr;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 20px;color: #fff;
-            @media only screen and (min-width: $desktop) {
-               // height: 70vh;
-            }
 
             .item{
                background-color: #fbf5f5;
-               // background-color: $grey_dark;
                padding: 10px;      
                @media only screen and (min-width: $desktop) {
                   padding: 40px;
@@ -402,8 +429,10 @@
                   font-size: .8em;
                   font-weight: bold;
                   color: $grey_dark;
+                  font-family: $oldStd;
+
                   @media only screen and (min-width: $desktop) {
-                     font-size: 1.3em;
+                     font-size: 1.4rem;
                      color: #fff;
                      margin: 10px 0;
                   }    
@@ -413,8 +442,10 @@
                   text-align: justify;
                   font-size: 0.65em;
                   color: #111;
+                  font-family: $archivo;
+
                   @media only screen and (min-width: $desktop) {
-                     font-size: 0.8em;
+                     font-size: 1rem;
                      color: #fff;
                   }   
 
@@ -524,6 +555,7 @@
             color: $grey;
             margin-bottom: 5px;
             text-transform: uppercase;
+            font-family: $archivo;
             @media only screen and (min-width: $desktop) {
                font-size: $main_subtitles_d;
             }
@@ -533,7 +565,7 @@
             font-size: 2em;
             text-transform: capitalize;
             margin-bottom: 15px;
-            font-family: 'Old Standard TT', serif;
+            font-family: $oldStd;
             @media only screen and (min-width: $desktop) {
                font-size: $main_titles_d;
             }
@@ -544,7 +576,7 @@
             list-style-type: none;
             margin-bottom: 10px;
             @media only screen and (min-width: $desktop) {
-               font-size: 1.8em;
+               font-size: 1.8rem;
             }
             
             &>*{
@@ -609,7 +641,7 @@
                }
 
                .title{
-                  font-family: 'Old Standard TT', serif;
+                  font-family: $oldStd;
                   font-size: 1.4em;
                }
 
@@ -635,6 +667,7 @@
             text-transform: uppercase;
             font-weight: bold;
             margin-bottom: 5px;
+            font-family: $archivo;
             @media only screen and (min-width: $desktop) {
                font-size: $main_subtitles_d;
             }
@@ -642,7 +675,7 @@
 
          .title{
             font-size: 2em;
-            font-family: 'Old Standard TT', serif;
+            font-family: $oldStd;
             margin-bottom: 10px;
             @media only screen and (min-width: $desktop) {
                font-size: $main_titles_d;
@@ -659,6 +692,7 @@
                color: $brown;
                font-weight: bold;
                flex-basis: 60%;
+               font-family: $archivo;
                @media only screen and (min-width: $desktop) {
                   font-size: 1.7em;
                }
@@ -719,6 +753,7 @@
 
             p{
                font-size: 0.8em;
+               font-family: $archivo;
                @media only screen and (min-width: $desktop) {
                   font-size: 1.6em;
                   line-height: 1.8;
@@ -745,13 +780,12 @@
       
       // TESTIMONIALS
       .testimonials{
-         margin-bottom: 30px;     
+         margin-bottom: 30px;        
          @media only screen and (min-width: $desktop) {
             margin-top: 120px;
          }  
 
          .head{
-            // padding-left: 10px;
 
             .subtitle{
                color: $grey;
@@ -760,6 +794,7 @@
                text-transform: uppercase;
                margin-bottom: 5px;
                font-size: 1em;
+               font-family: $archivo;
                @media only screen and (min-width: $desktop) {
                   font-size: $main_subtitles_d;
                }  
@@ -769,7 +804,7 @@
                font-size: 2em;
                text-transform: capitalize;
                margin-bottom: 15px;
-               font-family: 'Old Standard TT', serif;
+               font-family: $oldStd;
                font-size: 2.5em;
                @media only screen and (min-width: $desktop) {
                   font-size: $main_titles_d;
@@ -832,8 +867,11 @@
 
                .name{
                      font-size: 1.1em;
-                     font-family: 'Old Standard TT', serif;
+                     font-family: $oldStd;
                      margin-bottom: 5px;
+                     @media only screen and (min-width: $desktop) {
+                        font-size: 1.9rem;
+                     } 
                }
 
                .role{
@@ -843,15 +881,17 @@
                      font-size: .8em;
                      margin-bottom: 15px;
                      @media only screen and (min-width: $desktop) {
-                     font-size: .7em;
+                        font-size: 1.1rem;
+                        margin-bottom: 10px;
                      } 
                }
 
                p{
                      font-size: .7em;
                      text-align: center;
+                     font-family: $archivo;
                      @media only screen and (min-width: $desktop) {
-                        font-size: .6em;
+                        font-size: 1rem;
                      }   
                }
             }
@@ -869,7 +909,7 @@
             font-size: 1.3em;
             text-shadow: 2px 2px #474545;
             line-height: 1.4;
-            font-family: 'Old Standard TT', serif;
+            font-family: $oldStd;
             @media only screen and (min-width: $desktop) {
                margin-top: 20px;
                padding: 75px 20%;
@@ -934,13 +974,14 @@
                text-transform: uppercase;
                margin-bottom: 5px;
                font-size: 1em;
+               font-family: $archivo;
             }
    
             .title{
                font-size: 2em;
                text-transform: capitalize;
                margin-bottom: 15px;
-               font-family: 'Old Standard TT', serif;
+               font-family: $oldStd;
                font-size: 2em;     
                @media only screen and (min-width: $desktop) {
                   font-size: 2.5em;
@@ -1009,6 +1050,7 @@
                      justify-content: space-between;
                      font-size: .6em;
                      margin-bottom: 15px;
+                     font-family: $archivo;
                      @media only screen and (min-width: $desktop) {
                         margin-bottom: 25px;
                      }
@@ -1017,8 +1059,9 @@
                   .title{
                      font-size: .85em;
                      font-weight: bold;
-                     font-family: 'Old Standard TT', serif;
+                     font-family: $oldStd;
                      margin-bottom: 15px;    
+                     font-family: $oldStd;
                      @media only screen and (min-width: $desktop) {
                         margin-bottom: 15px;
                         font-size: 0.9;
@@ -1026,7 +1069,11 @@
                   }
  
                   p{
+                     font-family: $archivo;
                      font-size: .5em;
+                     @media only screen and (min-width: $desktop) {
+                        font-size: 1rem;
+                     }  
                   }
                }
             }
@@ -1034,6 +1081,5 @@
       }// new feeds
    }// mainContent_body
 
-   
 }
 

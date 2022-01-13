@@ -5,11 +5,18 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
-   <!-- CSS STYLES -->
-   <link rel="stylesheet" href="../css/styles.css">
    <!-- FONT AWESOME -->
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- MY CSS STYLES -->
+   <link rel="stylesheet" href="../css/styles.css">
+   <!-- Flatpickr -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+   <!-- MY JS -->
+   <script src="../js/flatpickr.js"></script>
+   <script src="../js/glider.js"></script>
+   <script src="../js/main.js"></script>
 </head>
 
 <body id="reservation">
@@ -18,10 +25,10 @@
     <nav>
        <div class="bars" onclick="document.querySelectorAll('.animation').forEach((el) => el.classList.toggle('active'));"><i class="fas fa-bars"></i></div>
        <div class="drop_down animation">
-          <ul class="animation">    
+          <ul class="animation">
              <li> <a class="button" href="./about_us.html">About&nbsp;Us</a></li>
              <li> <a class="button" href="./room_grid.html">Rooms</a></li>
-             <li> <a class="button" href="./reservation.html">Offers</a></li>
+             <li> <a class="button" href="./offers.html">Offers</a></li>
              <li> <a class="button" href="">Room Details</a></li>
              <li> <a class="button" href="./contact_us.html">Contact</a></li>
           </ul> 
@@ -104,7 +111,7 @@
             </div>
             
             <div class="secondary_nav">
-               <div><span><a href="">Home</a> |</span> <a href="">Room Details</a></div>
+               <div><span><a href="./home.html">Home</a> |</span> Room Details</div>
             </div>
          </section>
 
@@ -114,7 +121,7 @@
             <section class="mainContent_header2">
                 <div class="extra-banner">
                     <div class="title">
-                        <h1>Luxury Double Bed</h1>
+                        <h1>Habitación XXX</h1>
                     </div>
                     <div class="price">
                         <p>$345<span class="price-info">/Night</span></p>
@@ -131,11 +138,11 @@
                 <form action="">
                     <div class="check-in form-control">
                         <label for="checkIn">Check In</label>
-                        <input class="checkIn" name="checkIn" type="date" placeholder="Check in">
+                        <input class="checkIn flatpickr" name="checkIn" type="date" placeholder="Check in">
                     </div>
                     <div class="check-out form-control">
                         <label for="checkOut">Check Out</label>
-                        <input class="checkOut" name="checkOut" type="date" placeholder="Check out">
+                        <input class="checkOut flatpickr" name="checkOut" type="date" placeholder="Check out">
                     </div>
                     <div class="first_name form-control">
                         <label for="first_name">Fisrt Name</label>
@@ -150,8 +157,8 @@
                         <input class="email" name="email" type="email" placeholder="Email">
                     </div>
                     <div class="tlf form-control">
-                        <label for="tlf">Tlf</label>
-                        <input class="tlf" name="tlf" type="number" placeholder="Tlf">
+                        <label for="tlf">Phone</label>
+                        <input class="tlf" name="phone" type="text" placeholder="Phone">
                     </div>
                     <div class="comment form-control textarea-control">
                         <label for="comment">Comment</label>
@@ -159,12 +166,17 @@
                     </div>
                 </form>
                 <div class="check-button">
-                    <button class="checkButton" type="button">CHECK AVAILABILITY</button>
+                    <button class="checkButton button button_brown" type="button">CHECK AVAILABILITY</button>
                 </div>
             </section>
         </section>
         <!-- ARTICLE -->
         <section class="article">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis inventore rem quibusdam perspiciatis
+                facilis delectus eum veniam explicabo libero, magnam reprehenderit consectetur dicta sit ratione, optio
+                porro tempora rerum tempore, voluptate nemo? Doloribus soluta facilis ea animi voluptatem iusto eius
+                reiciendis ipsam dolor unde, ut, deserunt deleniti! Temporibus alias tenetur aperiam reprehenderit!
+            </p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis inventore rem quibusdam perspiciatis
                 facilis delectus eum veniam explicabo libero, magnam reprehenderit consectetur dicta sit ratione, optio
                 porro tempora rerum tempore, voluptate nemo? Doloribus soluta facilis ea animi voluptatem iusto eius
@@ -324,56 +336,63 @@
         <section class="related_rooms">
             <h2>Related Rooms</h2>
             <div class="related_room">
-                <div class="room-image">
-                    <div class="icons-bar">
-                        <ul>
-                            <li><i class="fas fa-bed"></i></li>
-                            <li><i class="fas fa-wifi"></i></li>
-                            <li><i class="fas fa-car-side"></i></li>
-                            <li><i class="fas fa-coffee"></i></li>
-                            <li><i class="fas fa-utensils"></i></li>
-                            <li><i class="fas fa-shower"></i></li>
-                            <li><i class="fas fa-tv"></i></li>
-                         </ul>
+                <a href="./reservation.html">
+                    <div class="room-image">
+                        <div class="icons-bar">
+                            <ul>
+                                <li><i class="fas fa-bed"></i></li>
+                                <li><i class="fas fa-wifi"></i></li>
+                                <li><i class="fas fa-car-side"></i></li>
+                                <li><i class="fas fa-coffee"></i></li>
+                                <li><i class="fas fa-utensils"></i></li>
+                                <li><i class="fas fa-shower"></i></li>
+                                <li><i class="fas fa-tv"></i></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                </a>
 
                 <div class="room_footer">
-                    <h3>Minimal Duplex Room</h3>
+                    <a class="room_footer_title" href="./reservation.html"><h3>Minimal Duplex Room</h3></a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa molestiae esse tempore quo</p>
                     <div class="info">
                         <div class="price">$345<span>/Night</span></div>
-                        <div class="booking">Booking Now</div>
+                        <a href="./reservation.html"><div class="booking">Booking Now</div></a>
                     </div>
                 </div>
             </div>
 
             <div class="related_room">
-                <div class="room-image">
-                    <div class="icons-bar">
-                        <ul>
-                            <li><i class="fas fa-bed"></i></li>
-                            <li><i class="fas fa-wifi"></i></li>
-                            <li><i class="fas fa-car-side"></i></li>
-                            <li><i class="fas fa-coffee"></i></li>
-                            <li><i class="fas fa-utensils"></i></li>
-                            <li><i class="fas fa-shower"></i></li>
-                            <li><i class="fas fa-tv"></i></li>
-                         </ul>
+                <a href="./reservation.html">
+                    <div class="room-image">
+                        <div class="icons-bar">
+                            <ul>
+                                <li><i class="fas fa-bed"></i></li>
+                                <li><i class="fas fa-wifi"></i></li>
+                                <li><i class="fas fa-car-side"></i></li>
+                                <li><i class="fas fa-coffee"></i></li>
+                                <li><i class="fas fa-utensils"></i></li>
+                                <li><i class="fas fa-shower"></i></li>
+                                <li><i class="fas fa-tv"></i></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                </a>
 
                 <div class="room_footer">
-                    <h3>Minimal Duplex Room</h3>
+                    <a class="room_footer_title" href="./reservation.html"><h3>Minimal Duplex Room</h3></a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa molestiae esse tempore quo</p>
                     <div class="info">
                         <div class="price">$345<span>/Night</span></div>
-                        <div class="booking">Booking Now</div>
+                        <a href="./reservation.html"><div class="booking">Booking Now</div></a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- ANCHOR TOP -->
+    <a href="#top" class="anchorTop"><i class="fas fa-arrow-up"></i></a>
 
     <!-- FOOTER -->
    <footer> 

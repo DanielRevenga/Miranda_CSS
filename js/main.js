@@ -1,5 +1,5 @@
-import runFlatpickr from "./flatpickr.js";
-import runGlider from "./glider.js";
+// import runFlatpickr from "./flatpickr.js";
+// import runGlider from "./glider.js";
 
 document.addEventListener("DOMContentLoaded", function() {
 

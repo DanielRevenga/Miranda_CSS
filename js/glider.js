@@ -15,4 +15,4 @@ const runGlider = () => {
 
 }
 
-export default runGlider;
+// export default runGlider;
